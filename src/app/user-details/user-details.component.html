@@ -1,0 +1,73 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{UserDetail.firstName}} {{UserDetail.lastName}}</mat-card-title>
+      <mat-card-subtitle>{{UserDetail.email}}</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+        
+
+        <mat-list>
+            <mat-list-item>
+                <div matline>Mobile : 
+                    <button mat-button>{{UserDetail.mobile}}</button>
+                </div> 
+            </mat-list-item>
+        
+
+        
+            <mat-list-item>
+                <div matline>Gender :
+                    <button mat-button>{{UserDetail.gender}}</button>
+                </div> 
+            </mat-list-item>
+    
+            <mat-list-item>
+                <div matline> Age :
+                    <button mat-button>{{UserDetail.age}}</button>
+                </div> 
+            </mat-list-item>
+
+            <mat-list-item>
+                <div matline> Address :
+                    <button mat-button>{{UserDetail.address}}</button>
+                </div> 
+            </mat-list-item>
+        
+
+        
+            <mat-list-item>
+                <div matline> City :
+                    <button mat-button>{{UserDetail.city}}</button>
+                </div> 
+            </mat-list-item>
+
+
+        
+            <mat-list-item>
+                <div matline>State :
+                    <button mat-button>{{UserDetail.state}}</button>
+                </div> 
+            </mat-list-item>
+    
+
+    
+            <mat-list-item>
+                <div matline>
+                    Country : 
+                    <button mat-button>{{UserDetail.country}}</button>
+                </div> 
+            </mat-list-item>
+        
+
+    
+            <mat-list-item>
+                <div matline>
+                    Pincode : 
+                    <button mat-button>{{UserDetail.pincode}}</button>
+                </div> 
+            </mat-list-item>
+        </mat-list>  
+    </mat-card-content>
+  </mat-card>

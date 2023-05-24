@@ -1,0 +1,60 @@
+{
+  "viewusers": [
+    {
+      "firstName": "pawan",
+      "lastName": "kalyan",
+      "mobile": "7654321987",
+      "email": "pawan123@gmail.com",
+      "dateOfBirth": "2002-03-02T18:30:00.000Z",
+      "age": "21",
+      "city": "Mumbai",
+      "state": "maharastra",
+      "country": "India",
+      "pincode": "560034",
+      "gender": "Male",
+      "id": 35
+    },
+    {
+      "firstName": "Vineetha",
+      "lastName": "Reddy",
+      "mobile": "6309532567",
+      "email": "vineethareddy@gamil.com",
+      "dateOfBirth": "2003-01-28T18:30:00.000Z",
+      "age": "21",
+      "city": "Guntur",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "pincode": "679860",
+      "gender": "Female",
+      "id": 36
+    },
+    {
+      "firstName": "navneeth ",
+      "lastName": "N",
+      "mobile": "8756904532",
+      "email": "navneeth34@gmail.com",
+      "dateOfBirth": "2010-03-04T18:30:00.000Z",
+      "age": "14",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": "560075",
+      "gender": "Male",
+      "id": 37
+    },
+    {
+      "firstName": "Sasi Kumar",
+      "lastName": "Peddireddy",
+      "mobile": "868875118",
+      "email": "sasikumarpeddireddy373@gmail.com",
+      "dateOfBirth": "2010-01-31T18:30:00.000Z",
+      "age": "13",
+      "city": "Bangalore",
+      "state": "KA",
+      "country": "India",
+      "pincode": "560037",
+      "gender": "Male",
+      "id": 38
+    }
+  ]
+}

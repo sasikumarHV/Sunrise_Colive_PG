@@ -27,7 +27,7 @@
                 <div matline> Age :
                     <button mat-button>{{UserDetail.age}}</button>
                 </div> 
-            </mat-list-item>
+            </mat-list-item>        
             <mat-list-item>
                 <div matline> City :
                     <button mat-button>{{UserDetail.city}}</button>
@@ -41,18 +41,14 @@
                     <button mat-button>{{UserDetail.state}}</button>
                 </div> 
             </mat-list-item>
-    
 
-    
             <mat-list-item>
                 <div matline>
                     Country : 
                     <button mat-button>{{UserDetail.country}}</button>
                 </div> 
             </mat-list-item>
-        
-
-    
+            
             <mat-list-item>
                 <div matline>
                     Pincode : 
@@ -62,3 +58,4 @@
         </mat-list>  
     </mat-card-content>
   </mat-card>
+  <button (click)="goBack()" class="mt-10" mat-raised-button style="background-color:rgb(232, 232, 51)">Back</button> 

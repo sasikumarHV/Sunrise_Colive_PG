@@ -6,6 +6,7 @@ import { User } from '../models/user.model';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
 
+
 import { NgConfirmService } from 'ng-confirm-box';
 import { NgToastService } from 'ng-angular-popup';
 
@@ -25,7 +26,7 @@ export class RegistrationListComponent implements OnInit{
   constructor(private api:ApiService, 
     private  router:Router, 
     private confirm: NgConfirmService,
-    private toast:NgToastService ){
+    private toast:NgToastService){
 
   }
   ngOnInit(): void {
@@ -52,6 +53,7 @@ export class RegistrationListComponent implements OnInit{
     this.router.navigate(['update',id]);
   }
   delete(id:number){
+   
     this.confirm.showConfirm("Are you sure want to delete ?",
     ()=>{
       this.api.deleteRegistered(id)
@@ -66,5 +68,7 @@ export class RegistrationListComponent implements OnInit{
     });
    
   }
+ 
+  
 
 }

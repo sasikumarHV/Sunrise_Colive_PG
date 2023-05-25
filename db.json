@@ -55,6 +55,34 @@
       "pincode": "560037",
       "gender": "Male",
       "id": 38
+    },
+    {
+      "firstName": "Anil Kumar",
+      "lastName": "Alla",
+      "mobile": "7956305681",
+      "email": "anilkumarA@gmail.com",
+      "dateOfBirth": "1994-05-01T18:30:00.000Z",
+      "age": "30",
+      "city": "Warangal",
+      "state": "Telangana",
+      "country": "India",
+      "pincode": "560089",
+      "gender": "Male",
+      "id": 39
+    },
+    {
+      "firstName": "Sowmya",
+      "lastName": "Narashima",
+      "mobile": "8897164567",
+      "email": "sowmyaN@gmail.com",
+      "dateOfBirth": "1992-01-31T18:30:00.000Z",
+      "age": "32",
+      "city": "Hebbal",
+      "state": "Karanataka",
+      "country": "India",
+      "pincode": "560038",
+      "gender": "Female",
+      "id": 40
     }
   ]
 }

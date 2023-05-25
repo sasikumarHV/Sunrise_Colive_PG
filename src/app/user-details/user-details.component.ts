@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user.model';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-user-details',
@@ -12,7 +14,7 @@ export class UserDetailsComponent implements OnInit{
 
   public userID! : number;
   UserDetail!: User
-  constructor(private activatedRoute : ActivatedRoute, private api : ApiService){
+  constructor(private activatedRoute : ActivatedRoute, private api : ApiService,private location : Location){
     
   }
   ngOnInit(): void {
@@ -28,5 +30,9 @@ export class UserDetailsComponent implements OnInit{
       console.log(this.UserDetail);
     })
   }
+  goBack(): void {
+    this.location.back();
+  }
+  
 
 }

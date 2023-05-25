@@ -19,7 +19,7 @@
                     <mat-error *ngIf="LastName.errors?.['required'] && (LastName.dirty || LastName.touched)">Last Name is required.</mat-error>
                     <mat-error *ngIf="LastName.errors?.['minlength'] && (LastName.dirty || LastName.touched)">Last Name is too short atleast 1 character</mat-error>
                     <mat-error *ngIf="LastName.errors?.['maxlength'] && (LastName.dirty || LastName.touched)">Last Name is too Long, atmost 30 characters</mat-error>
-                    <mat-error *ngIf="FirstName.errors?.['pattern'] && (LastName.dirty || LastName.touched)">last Name should start with an Alphabet only</mat-error>
+                    <mat-error *ngIf="LastName.errors?.['pattern'] && (LastName.dirty || LastName.touched)">last Name should start with an Alphabet only</mat-error>
                 </mat-form-field>
             </div>
             

@@ -1,14 +1,12 @@
 <div class="registration-form m-3 p-4">
     <form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">
-        <div class="row">
+        <div class="row" >
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input formControlName="firstName" matInput placeholder="First name" >
-                    <mat-error *ngIf="FirstName.errors?.['required'] && (FirstName.dirty || FirstName.touched)">First Name is required.</mat-error>
-                    <mat-error *ngIf="FirstName.errors?.['minlength'] && (FirstName.dirty || FirstName.touched)">First Name is too short, atleast 2 characters</mat-error>
-                    <mat-error *ngIf="FirstName.errors?.['maxlength'] && (FirstName.dirty || FirstName.touched)">First Name is too long, atmost 30 characters</mat-error>
-                    <mat-error *ngIf="FirstName.errors?.['pattern'] && (FirstName.dirty || FirstName.touched)">First Name should start with an Alphabet only</mat-error>
+                    <mat-error *ngIf="FirstName.errors?.['required'] && (FirstName.dirty || FirstName.touched)">please enter first name</mat-error>
+                    <mat-error *ngIf="FirstName.errors?.['pattern'] ">first name should start with an alphabet only</mat-error>
                 </mat-form-field>
             </div>
 
@@ -16,31 +14,32 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Last Name</mat-label>
                     <input formControlName="lastName" matInput placeholder="Last name">
-                    <mat-error *ngIf="LastName.errors?.['required'] && (LastName.dirty || LastName.touched)">Last Name is required.</mat-error>
-                    <mat-error *ngIf="LastName.errors?.['minlength'] && (LastName.dirty || LastName.touched)">Last Name is too short atleast 1 character</mat-error>
-                    <mat-error *ngIf="LastName.errors?.['maxlength'] && (LastName.dirty || LastName.touched)">Last Name is too Long, atmost 30 characters</mat-error>
-                    <mat-error *ngIf="FirstName.errors?.['pattern'] && (LastName.dirty || LastName.touched)">last Name should start with an Alphabet only</mat-error>
+                    <mat-error *ngIf="LastName.errors?.['required'] && (LastName.dirty || LastName.touched)">please enter last name</mat-error>
+                    <mat-error *ngIf="LastName.errors?.['pattern'] && (LastName.dirty || LastName.touched)">last name should start with an alphabet only</mat-error>
                 </mat-form-field>
             </div>
+            
             
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>Mobile</mat-label>
                     <input formControlName="mobile" matInput placeholder="contact">
-                    <mat-error *ngIf="Mobile.errors?.['required'] && (Mobile.dirty || Mobile.touched)">Mobile number is required.</mat-error>
-                    <mat-error *ngIf="Mobile.errors?.['pattern'] && (Mobile.dirty || Mobile.touched)">Mobile number is Invalid.</mat-error>
-                    <mat-error *ngIf="Mobile.errors?.['minlength'] && (Mobile.dirty || Mobile.touched)">Mobile number should contain only 10 digits.</mat-error>
-                    <mat-error *ngIf="Mobile.errors?.['maxlength'] && (Mobile.dirty || Mobile.touched)">Mobile number should contain only 10 digits.</mat-error>
+                    <mat-error *ngIf="Mobile.errors?.['required'] && (Mobile.dirty || Mobile.touched)">please enter mobile number</mat-error>
+                    <mat-error *ngIf="Mobile.errors?.['pattern'] && (Mobile.dirty || Mobile.touched)">please enter valid number</mat-error>
+                    <mat-error *ngIf="Mobile.errors?.['minlength'] && (Mobile.dirty || Mobile.touched)">please enter valid number</mat-error>
+                    <mat-error *ngIf="Mobile.errors?.['maxlength'] && (Mobile.dirty || Mobile.touched)">please enter valid number</mat-error>
                 </mat-form-field>
             </div>
+
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>E-mail</mat-label>
                     <input formControlName="email"matInput placeholder="mail id">
-                    <mat-error *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">Email Id is required</mat-error>
-                    <mat-error *ngIf="Email.errors?.['email'] && (Email.dirty || Email.touched)">Email Id is Invalid</mat-error>
+                    <mat-error *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">please enter email id</mat-error>
+                    <mat-error *ngIf="Email.errors?.['email'] && (Email.dirty || Email.touched)">please enter valid email id</mat-error>
                 </mat-form-field>
             </div>
+
             <div class="col-md-6 ">
                 <mat-form-field appearance="outline">
                     <mat-label>Choose a date</mat-label>
@@ -48,19 +47,21 @@
                     <mat-hint>MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
-                    <mat-error *ngIf="DateOfBirth.errors?.['required'] && (DateOfBirth.dirty || DateOfBirth.touched)">Date Of Birth is required.</mat-error>
+                    <mat-error *ngIf="DateOfBirth.errors?.['required'] && (DateOfBirth.dirty || DateOfBirth.touched)">please enter date of birth</mat-error>
                   </mat-form-field>
             </div>
+
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>Age</mat-label>
                     <input formControlName="age" matInput placeholder="Age">
-                    <mat-error *ngIf="Age.errors?.['required'] && (Age.dirty || Age.touched)">Age is required.</mat-error>
-                    <mat-error *ngIf="Age.errors?.['pattern']&& (Age.dirty || Age.touched)">Age is Invalid</mat-error>
-                    <mat-error *ngIf="Age.errors?.['maxlength'] && (Age.dirty || Age.touched)">Age should not exceed 3 digits</mat-error>
-                    <mat-error *ngIf="Age.errors?.['min']&& (Age.dirty || Age.touched)">Age should be greater than zero</mat-error>
+                    <mat-error *ngIf="Age.errors?.['required'] && (Age.dirty || Age.touched)">please enter age</mat-error>
+                    <mat-error *ngIf="Age.errors?.['pattern']&& (Age.dirty || Age.touched)">please enter valid age </mat-error>
+                    <mat-error *ngIf="Age.errors?.['maxlength'] && (Age.dirty || Age.touched)">please enter valid age</mat-error>
+                    <mat-error *ngIf="Age.errors?.['min']&& (Age.dirty || Age.touched)">please enter valid age</mat-error>
                 </mat-form-field>
             </div>
+
             <!--<div class="col-md-12 mt-4">
                 <mat-form-field appearance="outline">
                     <mat-label>Address</mat-label>
@@ -72,33 +73,34 @@
                 <mat-form-field appearance="outline">
                     <mat-label>city</mat-label>
                     <input formControlName="city"matInput placeholder="city">
-                    <mat-error *ngIf="City.errors?.['required'] && (City.dirty || City.touched)">City name is required.</mat-error>
-                    <mat-error *ngIf="City.errors?.['minlength'] &&(City.dirty || City.touched)">City Name is too short atleast 3 character</mat-error>
-                    <mat-error *ngIf="City.errors?.['pattern'] && (City.dirty || City.touched)">City Name should start with an Alphabet only</mat-error>
+                    <mat-error *ngIf="City.errors?.['required'] && (City.dirty || City.touched)">please enter city name</mat-error>
+                    <mat-error *ngIf="City.errors?.['minlength'] &&(City.dirty || City.touched)">please enter valid city name</mat-error>
+                    <mat-error *ngIf="City.errors?.['pattern'] && (City.dirty || City.touched)">please enter valid city name</mat-error>
                 </mat-form-field>
             </div>
+
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>State</mat-label>
                     <input formControlName="state" matInput placeholder="State/Province">
-                    <mat-error *ngIf="State.errors?.['required'] && (State.dirty || State.touched)">State name is required.</mat-error>
-                    <mat-error *ngIf="State.errors?.['minlength'] ">State Name is too short atleast 3 character</mat-error>
-                    <mat-error *ngIf="State.errors?.['pattern'] ">State Name should start with an Alphabet only</mat-error>
+                    <mat-error *ngIf="State.errors?.['required'] && (State.dirty || State.touched)">please enter state name</mat-error>
+                    <mat-error *ngIf="State.errors?.['minlength'] ">please enter valid state name </mat-error>
+                    <mat-error *ngIf="State.errors?.['pattern'] ">please enter valid state name </mat-error>
                 </mat-form-field>
             </div>
+
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>Pin Code</mat-label>
                     <input formControlName="pincode" matInput placeholder="Pin Code">   
-                    <mat-error *ngIf="Pincode.invalid && (Pincode.dirty || Pincode.touched)">
-                        <span *ngIf="Pincode.errors?.['required']">Pin Code is required</span>
-                        <span *ngIf="Pincode.errors?.['pattern']">Invalid Pin Code</span>
-                        <span *ngIf="Pincode.errors?.['minlength']">Pincode should be six digits</span>
-                        <span *ngIf="Pincode.errors?.['maxlength']">Pincode should be six digits</span>
-                    </mat-error>           
+                    <mat-error *ngIf="Pincode.errors?.['required'] && (Pincode.dirty || Pincode.touched)">please enter pincode </mat-error>
+                        <mat-error *ngIf="Pincode.errors?.['pattern']">please enter valid pincode</mat-error>
+
+                           
                  </mat-form-field>
             </div>
-            <div class="col-md-6 ">
+
+            <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>Country</mat-label>
                     <mat-select formControlName="country">
@@ -106,9 +108,10 @@
                         {{country}}
                       </mat-option>
                     </mat-select>
-                    <mat-error *ngIf="registerForm.get('country')?.hasError('required')">Country Name is required</mat-error>
+                    <mat-error *ngIf="registerForm.get('country')?.hasError('required')">please select country name</mat-error>
                   </mat-form-field>
             </div>
+
             <div class="col-md-6">
                 <label id="example-radio-group-label">Select your gender</label>
                 <mat-radio-group formControlName="gender" class="example-radio-group">
@@ -116,10 +119,10 @@
                         {{gender}} 
                       </mat-radio-button>
                       <mat-error *ngIf="Gender.invalid && (Gender.dirty || Gender.touched)">
-                        <span *ngIf="Gender.errors?.['required']">Gender is required</span>
+                        <span *ngIf="Gender.errors?.['required']">please select gender</span>
                       </mat-error>
                 </mat-radio-group>
-            </div>        
+            </div>          
         </div>
         <button *ngIf="!isUpdateActive" (click)="submit()" class="mt-4" mat-raised-button [disabled]="registerForm.invalid" style="background-color:green">Submit</button>
         <button *ngIf="isUpdateActive" (click)="update()" class="mt-4" mat-raised-button style="background-color:rgba(244, 244, 1, 0.934)">Update</button> 

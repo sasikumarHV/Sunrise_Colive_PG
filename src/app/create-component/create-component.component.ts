@@ -5,9 +5,6 @@ import { NgToastService } from 'ng-angular-popup';
 import { ApiService } from '../services/api.service';
 import { User } from '../models/user.model';
 
-
-
-
 @Component({
   selector: 'app-create-component',
   templateUrl: './create-component.component.html',
@@ -43,22 +40,13 @@ export class CreateComponentComponent implements OnInit {
 
     });
 
-  
     this.activatedRoute.params.subscribe(val=>{
       this.userIdToUpdate = val['id'];
-      if (this.userIdToUpdate){
-        this.isUpdateActive=true;
         this.api.getRegisteredUserId(this.userIdToUpdate)
-          .subscribe({
-            next : (res)=>{
+          .subscribe(res =>{
+            this.isUpdateActive = true;
             this.fillFormToUpdate(res);
-            
-          },
-          error: (err:any) => {
-            console.log(err);
-          }
-         } )
-        } 
+          })     
     })
   }
   fillFormToUpdate(user: User) {
@@ -78,21 +66,20 @@ export class CreateComponentComponent implements OnInit {
 
   submit(){
     this.api.postRegistration(this.registerForm.value).subscribe(res=>{
-      this.toastService.success({detail:"success",summary:"Submitted Successfully",duration:2000});
+      this.toastService.success({detail:"Success",summary:"Submitted Successfully",duration:1000});
       this.registerForm.reset();
       this.registerForm.markAsUntouched();
       this.registerForm.markAsPristine();
-
       }) ;
   }
   update(){
     this.api.updateRegisterUser(this.registerForm.value, this.userIdToUpdate)
     .subscribe(res=>{
-      this.toastService.success({detail:"success",summary:"Updated Successfully",duration:3000});
+      this.toastService.success({detail:"success",summary:"Updated Successfully",duration:1000});
       this.router.navigate(['register']);
-      //this.registerForm.reset();
-  });
-}
+      this.registerForm.reset();
+    });
+  }
 registerSubmitted(){
   console.log(this.registerForm.get('firstName'))
 }
@@ -138,9 +125,5 @@ get Pincode(): FormControl{
 get Gender(): FormControl{
   return this.registerForm.get('gender') as FormControl;
 }
-
-
-
-
 
 }

@@ -1,0 +1,16 @@
+.main-div mat-card{
+    padding: 0px;
+}
+.login-form{
+    padding: 20px;
+}
+.example-form {
+    min-width: 300px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  

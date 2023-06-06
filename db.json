@@ -1,20 +1,6 @@
 {
   "viewusers": [
     {
-      "firstName": "pawan",
-      "lastName": "kalyan",
-      "mobile": "7654321987",
-      "email": "pawan123@gmail.com",
-      "dateOfBirth": "2002-03-02T18:30:00.000Z",
-      "age": "21",
-      "city": "Mumbai",
-      "state": "maharastra",
-      "country": "India",
-      "pincode": "560034",
-      "gender": "Male",
-      "id": 1
-    },
-    {
       "firstName": "Vineetha",
       "lastName": "Reddy",
       "mobile": "6309532567",
@@ -26,7 +12,7 @@
       "country": "India",
       "pincode": "679860",
       "gender": "Female",
-      "id": 2
+      "id": 1
     },
     {
       "firstName": "navneeth ",
@@ -40,7 +26,7 @@
       "country": "India",
       "pincode": "560075",
       "gender": "Male",
-      "id": 3
+      "id": 2
     },
     {
       "firstName": "Sasi Kumar",
@@ -54,7 +40,7 @@
       "country": "India",
       "pincode": "560037",
       "gender": "Male",
-      "id": 4
+      "id": 3
     },
     {
       "firstName": "Anil Kumar",
@@ -68,7 +54,7 @@
       "country": "India",
       "pincode": "560089",
       "gender": "Male",
-      "id": 5
+      "id": 4
     },
     {
       "firstName": "Samvedhya",
@@ -82,7 +68,7 @@
       "country": "India",
       "pincode": "560035",
       "gender": "Female",
-      "id": 6
+      "id": 5
     },
     {
       "firstName": "Andrew ",
@@ -96,7 +82,7 @@
       "country": "USA",
       "pincode": "765438",
       "gender": "Male",
-      "id": 7
+      "id": 6
     },
     {
       "firstName": "nick",
@@ -110,7 +96,16 @@
       "country": "USA",
       "pincode": "132098",
       "gender": "Male",
-      "id": 8
+      "id": 7
+    }
+  ],
+  "signupUsers": [
+    {
+      "name": "admin",
+      "mobile": "1234567890",
+      "email": "admin@gmail.com",
+      "password": "12345",
+      "id": 1
     }
   ]
 }

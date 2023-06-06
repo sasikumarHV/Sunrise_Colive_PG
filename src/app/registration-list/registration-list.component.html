@@ -1,3 +1,4 @@
+
 <div class="d-flex justify-content-between">
   <button routerLink="/register" mat-raised-button style="background-color: rgb(255, 230, 0);"><i class="fa fa-arrow-left" aria-hidden="true"></i>
     Back</button><br>
@@ -6,6 +7,7 @@
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Firstname" #input >
   </mat-form-field>
 </div>
+
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
@@ -106,5 +108,5 @@
     </tr>
   </table>
 
-  <mat-paginator [pageSizeOptions]="[6, 15, 50]" aria-label="Select page of users"></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[5, 15, 50]" aria-label="Select page of users"></mat-paginator>
 </div>

@@ -1,3 +1,15 @@
+<mat-toolbar color="primary">
+    <span>User Registration Page</span>
+    <span class="example-spacer"></span>
+<div class="button-container">
+    <button class="example" routerLink="/list" mat-raised-button color="warn">
+      <span >View Users</span>
+    </button>
+    <button routerLink='/login' class="example" mat-raised-button >
+        <span>  Logout</span>
+    </button>
+</div>
+</mat-toolbar>
 <div class="registration-form m-3 p-4">
     <form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">
         <div class="row" >
@@ -15,11 +27,10 @@
                     <mat-label>Last Name</mat-label>
                     <input formControlName="lastName" matInput placeholder="Last name">
                     <mat-error *ngIf="LastName.errors?.['required'] && (LastName.dirty || LastName.touched)">please enter last name</mat-error>
-                    <mat-error *ngIf="FirstName.errors?.['pattern'] && (LastName.dirty || LastName.touched)">last name should start with an alphabet only</mat-error>
+                    <mat-error *ngIf="LastName.errors?.['pattern'] && (LastName.dirty || LastName.touched)">last name should start with an alphabet only</mat-error>
                 </mat-form-field>
             </div>
-            
-            
+                
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>Mobile</mat-label>
@@ -94,9 +105,7 @@
                     <mat-label>Pin Code</mat-label>
                     <input formControlName="pincode" matInput placeholder="Pin Code">   
                     <mat-error *ngIf="Pincode.errors?.['required'] && (Pincode.dirty || Pincode.touched)">please enter pincode </mat-error>
-                        <mat-error *ngIf="Pincode.errors?.['pattern']">please enter valid pincode</mat-error>
-
-                           
+                        <mat-error *ngIf="Pincode.errors?.['pattern']">please enter valid pincode</mat-error>        
                  </mat-form-field>
             </div>
 

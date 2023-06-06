@@ -1,6 +1,8 @@
 mat-form-field{
     width:100%;
-    padding-bottom:4%;   
+    padding-bottom:4%;  
+    display: block;
+    
 }
 .example-radio-group {
     display: flex;
@@ -12,6 +14,19 @@ mat-form-field{
   .example-radio-button {
     margin: 4px;
   }
+  .example-spacer {
+    flex: 1 1 auto;
+   
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px; 
+  }
+  
+  
+  
+  
 
  
 

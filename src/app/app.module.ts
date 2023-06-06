@@ -16,15 +16,19 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { CreateComponentComponent } from './create-component/create-component.component';
+import {HttpClientModule } from '@angular/common/http';
+import {MatFormFieldModule } from '@angular/material/form-field';
+import {CreateComponentComponent } from './create-component/create-component.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {MatChipsModule} from '@angular/material/chips';
+import {LoginComponent } from './login/login.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SignupComponent } from './signup/signup.component';
+
 
 
 
@@ -36,7 +40,9 @@ import {MatChipsModule} from '@angular/material/chips';
     CreateComponentComponent,
     AppComponent,
     RegistrationListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +67,8 @@ import {MatChipsModule} from '@angular/material/chips';
     MatCardModule,
     MatListModule,
     MatChipsModule,
+    FlexLayoutModule,
+
  
   
  

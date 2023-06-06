@@ -22,7 +22,7 @@ export class RegistrationListComponent implements OnInit{
   @ViewChild(MatSort) sort!:MatSort;
   displayedColumns:string[] =["id","firstName","lastName","mobile","dateOfBirth","age","city","state","country","gender","action"];
   toastService: any;
-  
+  Users: User[] | undefined ;
   constructor(private api:ApiService, 
     private  router:Router, 
     private confirm: NgConfirmService,

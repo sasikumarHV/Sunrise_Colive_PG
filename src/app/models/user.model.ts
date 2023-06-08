@@ -3,7 +3,9 @@ export class User{
     lastName!:string;
     mobile!:string;
     email!:string;
-    age!:string;
+    dateOfBirth!:string;
+    salary!:string;
+    //age!:string;
     city!:string;
     state!:string;
     pincode!:string;

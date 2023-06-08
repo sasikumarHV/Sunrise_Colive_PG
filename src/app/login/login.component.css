@@ -1,16 +1,28 @@
 .main-div mat-card{
-    padding: 0px;
+    padding: 0%;
 }
 .login-form{
+    padding: 20%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 .example-form {
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 300%;
+    max-width: 500%;
     width: 100%;
   }
   
   .example-full-width {
     width: 100%;
+  }
+
+  .container{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   

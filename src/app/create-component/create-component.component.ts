@@ -13,10 +13,13 @@ import { User } from '../models/user.model';
 export class CreateComponentComponent implements OnInit {
   public countries=["USA","UK","Australia","Japan","India","China","Rusia"];
   public genders=["Male","Female","Others"];
+  public salary!:number;
 
   public registerForm!: FormGroup
   private userIdToUpdate!: number;
   public isUpdateActive: boolean = false;
+  confirm: any;
+  toast: any;
 
   constructor(private fb : FormBuilder ,
     private api:ApiService,
@@ -31,7 +34,8 @@ export class CreateComponentComponent implements OnInit {
       mobile: new FormControl("",{ validators : [Validators.required,Validators.pattern('[0-9].*'),Validators.minLength(10),Validators.maxLength(10)]}),
       email: new FormControl("",{ validators : [Validators.required,Validators.email]}),
       dateOfBirth: new FormControl("",{ validators : [Validators.required]}),
-      age: new FormControl("",{ validators : [Validators.required,Validators.pattern('[0-9].*'),Validators.maxLength(3),Validators.min(1)]}),
+      salary: new FormControl("",{ validators : [Validators.required,Validators.pattern('[0-9].*')]}),
+      //age: new FormControl("",{ validators : [Validators.required,Validators.pattern('[0-9].*'),Validators.maxLength(3),Validators.min(1)]}),
       city: new FormControl("",{ validators : [Validators.required,Validators.pattern('[a-zA-Z].*'),Validators.minLength(3)]}),
       state: new FormControl("",{ validators : [Validators.required,Validators.pattern('[a-zA-Z].*'),Validators.minLength(3)]}),
       country: new FormControl("",{ validators : [Validators.required]}),
@@ -50,12 +54,14 @@ export class CreateComponentComponent implements OnInit {
     })
   }
   fillFormToUpdate(user: User) {
-    this.registerForm.setValue({
+    this.registerForm.patchValue({
       firstName:user.firstName,
       lastName:user.lastName,
       mobile:user.mobile,
       email:user.email,
-      age:user.age,
+      dateOfBirth : user.dateOfBirth,
+      salary : user.salary,
+      //age:user.age,
       city:user.city,
       state:user.state,
       pincode:user.pincode,
@@ -68,21 +74,27 @@ export class CreateComponentComponent implements OnInit {
     this.api.postRegistration(this.registerForm.value).subscribe(res=>{
       this.toastService.success({detail:"Success",summary:"Submitted Successfully",duration:1000});
       this.registerForm.reset();
+      this.router.navigate(['list']);
       this.registerForm.markAsUntouched();
       this.registerForm.markAsPristine();
       }) ;
   }
+ 
   update(){
     this.api.updateRegisterUser(this.registerForm.value, this.userIdToUpdate)
     .subscribe(res=>{
       this.toastService.success({detail:"success",summary:"Updated Successfully",duration:1000});
-      this.router.navigate(['register']);
+      this.router.navigate(['list']);
       this.registerForm.reset();
     });
   }
-registerSubmitted(){
-  console.log(this.registerForm.get('firstName'))
-}
+
+  cancel(){
+    this.registerForm.reset();
+  }
+  registerSubmitted(){
+    console.log(this.registerForm.get('firstName'))
+  }
 
 get FirstName(): FormControl{
   return this.registerForm.get('firstName') as FormControl;
@@ -106,6 +118,9 @@ get DateOfBirth(): FormControl{
 get Age(): FormControl{
   return this.registerForm.get('age') as FormControl;
 }
+get Salary(): FormControl{
+  return this.registerForm.get('salary') as FormControl;
+}
 get City(): FormControl{
   return this.registerForm.get('city') as FormControl;
 }
@@ -125,5 +140,6 @@ get Pincode(): FormControl{
 get Gender(): FormControl{
   return this.registerForm.get('gender') as FormControl;
 }
+
 
 }

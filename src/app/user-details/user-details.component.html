@@ -22,12 +22,19 @@
                     <button mat-button>{{UserDetail.gender}}</button>
                 </div> 
             </mat-list-item>
-    
+
             <mat-list-item>
+                <div matline> Salary :
+                    <button mat-button>{{UserDetail.salary}}</button>
+                </div> 
+            </mat-list-item>
+    
+           <!--<mat-list-item>
                 <div matline> Age :
                     <button mat-button>{{UserDetail.age}}</button>
                 </div> 
-            </mat-list-item>        
+            </mat-list-item> -->
+                   
             <mat-list-item>
                 <div matline> City :
                     <button mat-button>{{UserDetail.city}}</button>
@@ -60,4 +67,4 @@
   </mat-card>
   <br>
   <br>
-  <button (click)="goBack()" class="mt-10" mat-raised-button style="background-color:rgb(232, 232, 51)"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button> 
+  <button (click)="goBack()" class="mt-10" mat-raised-button style="background-color:rgb(255, 230, 0)"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button> 

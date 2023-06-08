@@ -19,12 +19,12 @@ export class LoginComponent implements OnInit  {
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', Validators.required] //Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/)
     })
     
   }
   login(){
-    this.http.get<any>("http://localhost:3000/signupusers")
+    this.http.get<any>("http://localhost:3000/signupUsers")
     .subscribe(res=>{
       const user = res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password

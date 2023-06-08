@@ -1,15 +1,43 @@
 table {
-    width: 4%;
+    width: 100%;
   }
   
   .mat-mdc-form-field {
-    font-size: 5px;
-    width: 20%;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .filter-spacer{
+    width: 250px;
+    margin-top: 12px;
+    margin-left: 300px;
   }
   
   td, th {
-    width: 0.01%;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+.table-reponsive{
+  overflow-x: auto;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+ 
+  
 
   
   

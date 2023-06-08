@@ -2,10 +2,10 @@
     <span>User Registration Page</span>
     <span class="example-spacer"></span>
 <div class="button-container">
-    <button class="example" routerLink="/list" mat-raised-button color="warn">
-      <span >View Users</span>
+    <button class="example" routerLink="/list" mat-raised-button >
+      <span >View users</span>
     </button>
-    <button routerLink='/login' class="example" mat-raised-button >
+    <button routerLink='/login' class="example" mat-raised-button color="warn">
         <span>  Logout</span>
     </button>
 </div>
@@ -64,6 +64,15 @@
 
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
+                    <mat-label>Salary</mat-label>
+                    <input formControlName="salary"matInput placeholder="Salary">
+                    <mat-error *ngIf="Salary.errors?.['required'] && (Salary.dirty || Salary.touched)">please enter salary details</mat-error>
+                    <mat-error *ngIf="Salary.errors?.['salary'] && (Salary.dirty || Salary.touched)">please enter valid salary</mat-error>
+                </mat-form-field>
+            </div>
+
+            <!--<div class="col-md-6">
+                <mat-form-field appearance="outline">
                     <mat-label>Age</mat-label>
                     <input formControlName="age" matInput placeholder="Age">
                     <mat-error *ngIf="Age.errors?.['required'] && (Age.dirty || Age.touched)">please enter age</mat-error>
@@ -71,7 +80,7 @@
                     <mat-error *ngIf="Age.errors?.['maxlength'] && (Age.dirty || Age.touched)">please enter valid age</mat-error>
                     <mat-error *ngIf="Age.errors?.['min']&& (Age.dirty || Age.touched)">please enter valid age</mat-error>
                 </mat-form-field>
-            </div>
+            </div> -->
 
             <!--<div class="col-md-12 mt-4">
                 <mat-form-field appearance="outline">
@@ -117,7 +126,7 @@
                         {{country}}
                       </mat-option>
                     </mat-select>
-                    <mat-error *ngIf="registerForm.get('country')?.hasError('required')">please select country name</mat-error>
+                    <mat-error *ngIf="Country.errors?.['required'] && (Country.dirty || Country.touched)">please select country name</mat-error>
                   </mat-form-field>
             </div>
 
@@ -133,7 +142,10 @@
                 </mat-radio-group>
             </div>          
         </div>
-        <button *ngIf="!isUpdateActive" (click)="submit()" class="mt-4" mat-raised-button [disabled]="registerForm.invalid" style="background-color:green">Submit</button>
+        <div class="button-container">
+            <button *ngIf="!isUpdateActive" (click)="submit()" class="submit-button" mat-raised-button [disabled]="registerForm.invalid" style="background-color: green; color: white;">Submit</button>
+            <button mat-raised-button color="warn" (click)="cancel()" class="cancel-button">Cancel</button>
+          </div>
         <button *ngIf="isUpdateActive" (click)="update()" class="mt-4" mat-raised-button style="background-color:rgba(244, 244, 1, 0.934)">Update</button> 
     </form>
 </div>

@@ -1,0 +1,26 @@
+.container{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.address {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container {
+    display: flex;
+  }
+  
+  .contact-info {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .google-map {
+    width: 100px;
+    float: left;
+    flex: 1;
+  }
+  
+  

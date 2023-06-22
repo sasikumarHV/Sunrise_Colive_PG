@@ -1,39 +1,60 @@
 table {
-    width: 100%;
-  }
-  
-  .mat-mdc-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
+  width: 100%;
+  border-collapse: collapse; /* Add this line to collapse table borders */
+  border: 1px solid #4a4b4b; /* Add this line to set border properties */
+}
 
-  .filter-spacer{
-    width: 250px;
-    margin-top: 12px;
-    margin-left: 300px;
-  }
-  
-  td, th {
-    width: auto;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-.table-reponsive{
+.mat-mdc-form-field {
+  font-size: 12px;
+  width: 100%;
+}
+
+.filter-spacer {
+  width: 250px;
+  margin-top: 12px;
+  margin-left: auto;
+}
+
+.mat-input-element::placeholder {
+  color: white;
+}
+
+.mat-form-field-wrapper .mat-form-field-infix {
+  background-color: white;
+}
+
+td, th {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-responsive {
   overflow-x: auto;
 }
 
 .d-flex {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 600px) {
   .d-flex {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
   }
 }
+
+
+
+
+
+
+
+
+
 
 
  

@@ -5,6 +5,8 @@ import { NgToastService } from 'ng-angular-popup';
 import { ApiService } from '../services/api.service';
 import { User } from '../models/user.model';
 
+
+
 @Component({
   selector: 'app-create-component',
   templateUrl: './create-component.component.html',
@@ -13,7 +15,7 @@ import { User } from '../models/user.model';
 export class CreateComponentComponent implements OnInit {
   public countries=["USA","UK","Australia","Japan","India","China","Rusia"];
   public genders=["Male","Female","Others"];
-  public salary!:number;
+  public roomNos=["101","102","103","104","105","201","202","203","204","205","301","302","303","304","305","401","402","403","404","405"]
 
   public registerForm!: FormGroup
   private userIdToUpdate!: number;
@@ -33,8 +35,10 @@ export class CreateComponentComponent implements OnInit {
       lastName: new FormControl("",{ validators : [Validators.required ,Validators.minLength(1),Validators.maxLength(30),Validators.pattern("[a-zA-Z].*")]}),
       mobile: new FormControl("",{ validators : [Validators.required,Validators.pattern('[0-9].*'),Validators.minLength(10),Validators.maxLength(10)]}),
       email: new FormControl("",{ validators : [Validators.required,Validators.email]}),
-      dateOfBirth: new FormControl("",{ validators : [Validators.required]}),
-      salary: new FormControl("",{ validators : [Validators.required,Validators.pattern('[0-9].*')]}),
+      joiningDate: new FormControl("",{ validators : [Validators.required]}),
+      leavingDate: new FormControl("",{ validators : [Validators.required]}),
+      workplaceLocation:new FormControl("",{ validators:[Validators.required]}),
+      roomNo: new FormControl("",{ validators : [Validators.required]}),
       //age: new FormControl("",{ validators : [Validators.required,Validators.pattern('[0-9].*'),Validators.maxLength(3),Validators.min(1)]}),
       city: new FormControl("",{ validators : [Validators.required,Validators.pattern('[a-zA-Z].*'),Validators.minLength(3)]}),
       state: new FormControl("",{ validators : [Validators.required,Validators.pattern('[a-zA-Z].*'),Validators.minLength(3)]}),
@@ -44,10 +48,10 @@ export class CreateComponentComponent implements OnInit {
 
     });
 
-    this.activatedRoute.params.subscribe(val=>{
+    this.activatedRoute.params.subscribe((val: { [x: string]: number; })=>{
       this.userIdToUpdate = val['id'];
         this.api.getRegisteredUserId(this.userIdToUpdate)
-          .subscribe(res =>{
+          .subscribe((res: User) =>{
             this.isUpdateActive = true;
             this.fillFormToUpdate(res);
           })     
@@ -59,9 +63,10 @@ export class CreateComponentComponent implements OnInit {
       lastName:user.lastName,
       mobile:user.mobile,
       email:user.email,
-      dateOfBirth : user.dateOfBirth,
-      salary : user.salary,
-      //age:user.age,
+      joiningDate : user.joiningDate,
+      leavingDate : user.leavingDate,
+      workplaceLocation:user.workplaceLocation,
+      roomNo : user.roomNo,
       city:user.city,
       state:user.state,
       pincode:user.pincode,
@@ -71,7 +76,7 @@ export class CreateComponentComponent implements OnInit {
   }
 
   submit(){
-    this.api.postRegistration(this.registerForm.value).subscribe(res=>{
+    this.api.postRegistration(this.registerForm.value).subscribe((res: any)=>{
       this.toastService.success({detail:"Success",summary:"Submitted Successfully",duration:1000});
       this.registerForm.reset();
       this.router.navigate(['list']);
@@ -82,7 +87,7 @@ export class CreateComponentComponent implements OnInit {
  
   update(){
     this.api.updateRegisterUser(this.registerForm.value, this.userIdToUpdate)
-    .subscribe(res=>{
+    .subscribe((res: any)=>{
       this.toastService.success({detail:"success",summary:"Updated Successfully",duration:1000});
       this.router.navigate(['list']);
       this.registerForm.reset();
@@ -111,15 +116,19 @@ get Email(): FormControl{
   return this.registerForm.get('email') as FormControl;
 }
 
-get DateOfBirth(): FormControl{
-  return this.registerForm.get('dateOfBirth') as FormControl;
+get JoiningDate(): FormControl{
+  return this.registerForm.get('joiningDate') as FormControl;
 }
 
-get Age(): FormControl{
-  return this.registerForm.get('age') as FormControl;
+get LeavingDate(): FormControl{
+  return this.registerForm.get('leavingDate') as FormControl;
 }
-get Salary(): FormControl{
-  return this.registerForm.get('salary') as FormControl;
+
+get WorkPlaceLocation(): FormControl{
+  return this.registerForm.get('workplaceLocation') as FormControl;
+}
+get RoomNo(): FormControl{
+  return this.registerForm.get('roomNo') as FormControl;
 }
 get City(): FormControl{
   return this.registerForm.get('city') as FormControl;

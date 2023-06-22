@@ -1,15 +1,15 @@
-<mat-toolbar color="primary">
-    <span>User Registration Page</span>
-    <span class="example-spacer"></span>
-<div class="button-container">
-    <button class="example" routerLink="/list" mat-raised-button >
-      <span >View users</span>
-    </button>
-    <button routerLink='/login' class="example" mat-raised-button color="warn">
-        <span>  Logout</span>
-    </button>
-</div>
-</mat-toolbar>
+<div class="button-container1">
+    <div class="button-wrapper">
+        <button mat-stroked-button routerLink="/callreturn" >Call Requests</button>
+        <button mat-stroked-button routerLink="/list" style="margin-left: 10px;">Existing Customers</button>
+    </div>
+</div>      
+    <div>
+        <h1 style="text-align: center;color: rgba(228, 71, 4, 0.991);"><b>Customer Registration Form</b></h1>
+    </div>
+    
+ 
+
 <div class="registration-form m-3 p-4">
     <form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">
         <div class="row" >
@@ -53,42 +53,62 @@
 
             <div class="col-md-6 ">
                 <mat-form-field appearance="outline">
-                    <mat-label>Choose a date</mat-label>
-                    <input formControlName="dateOfBirth" matInput [matDatepicker]="picker">
+                    <mat-label>Check in Date</mat-label>
+                    <input formControlName="joiningDate" matInput [matDatepicker]="picker">
                     <mat-hint>MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
-                    <mat-error *ngIf="DateOfBirth.errors?.['required'] && (DateOfBirth.dirty || DateOfBirth.touched)">please enter date of birth</mat-error>
+                    <mat-error *ngIf="JoiningDate.errors?.['required'] && (JoiningDate.dirty || JoiningDate.touched)">please enter joining date</mat-error>
                   </mat-form-field>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 ">
                 <mat-form-field appearance="outline">
-                    <mat-label>Salary</mat-label>
-                    <input formControlName="salary"matInput placeholder="Salary">
-                    <mat-error *ngIf="Salary.errors?.['required'] && (Salary.dirty || Salary.touched)">please enter salary details</mat-error>
-                    <mat-error *ngIf="Salary.errors?.['salary'] && (Salary.dirty || Salary.touched)">please enter valid salary</mat-error>
-                </mat-form-field>
+                    <mat-label>Checkout Date</mat-label>
+                    <input formControlName="leavingDate" matInput [matDatepicker]="leavingPicker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="leavingPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #leavingPicker></mat-datepicker>
+                    <mat-error *ngIf="LeavingDate.errors?.['required'] && (LeavingDate.dirty || LeavingDate.touched)">please enter leaving date</mat-error>
+                  </mat-form-field>
             </div>
 
-            <!--<div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <mat-form-field appearance="outline">
-                    <mat-label>Age</mat-label>
-                    <input formControlName="age" matInput placeholder="Age">
-                    <mat-error *ngIf="Age.errors?.['required'] && (Age.dirty || Age.touched)">please enter age</mat-error>
-                    <mat-error *ngIf="Age.errors?.['pattern']&& (Age.dirty || Age.touched)">please enter valid age </mat-error>
-                    <mat-error *ngIf="Age.errors?.['maxlength'] && (Age.dirty || Age.touched)">please enter valid age</mat-error>
-                    <mat-error *ngIf="Age.errors?.['min']&& (Age.dirty || Age.touched)">please enter valid age</mat-error>
+                    <mat-label>State</mat-label>
+                    <input formControlName="state" matInput placeholder="State/Province">
+                    <mat-error *ngIf="State.errors?.['required'] && (State.dirty || State.touched)">please enter state name</mat-error>
+                    <mat-error *ngIf="State.errors?.['minlength'] ">please enter valid state name </mat-error>
+                    <mat-error *ngIf="State.errors?.['pattern'] ">please enter valid state name </mat-error>
                 </mat-form-field>
             </div> -->
 
-            <!--<div class="col-md-12 mt-4">
-                <mat-form-field appearance="outline">
-                    <mat-label>Address</mat-label>
-                    <input formControlName="address" matInput placeholder="Address" >
-                </mat-form-field>
-            </div> -->
            
+
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Workplace Location</mat-label>
+                    <input formControlName="workplaceLocation"matInput placeholder="workplaceLocation">
+                    <mat-error *ngIf="WorkPlaceLocation.errors?.['required'] && (WorkPlaceLocation.dirty || WorkPlaceLocation.touched)">please enter workplace location</mat-error>
+                    <mat-error *ngIf="WorkPlaceLocation.errors?.['minlength'] &&(WorkPlaceLocation.dirty ||WorkPlaceLocation.touched)">please enter workplace location</mat-error>
+                    <mat-error *ngIf="WorkPlaceLocation.errors?.['pattern'] && (WorkPlaceLocation.dirty ||WorkPlaceLocation.touched)">please enter work place location</mat-error>
+                </mat-form-field>
+            </div>  
+
+
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Room no</mat-label>
+                    <mat-select formControlName="roomNo">
+                      <mat-option *ngFor="let roomNo of roomNos" [value]="roomNo">
+                        {{roomNo}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="RoomNo.errors?.['required'] && (RoomNo.dirty || RoomNo.touched)">please select room number</mat-error>
+                  </mat-form-field>
+            </div>
+
+
             <div class="col-md-6">
                 <mat-form-field appearance="outline">
                     <mat-label>city</mat-label>
@@ -144,8 +164,8 @@
         </div>
         <div class="button-container">
             <button *ngIf="!isUpdateActive" (click)="submit()" class="submit-button" mat-raised-button [disabled]="registerForm.invalid" style="background-color: green; color: white;">Submit</button>
-            <button mat-raised-button color="warn" (click)="cancel()" class="cancel-button">Cancel</button>
-          </div>
-        <button *ngIf="isUpdateActive" (click)="update()" class="mt-4" mat-raised-button style="background-color:rgba(244, 244, 1, 0.934)">Update</button> 
+            <button *ngIf="!isUpdateActive" mat-raised-button color="warn" (click)="cancel()" class="cancel-button">Cancel</button>
+            <button *ngIf="isUpdateActive" (click)="update()" class="mt-4" mat-raised-button style="background-color:rgba(244, 244, 1, 0.934)">Update</button> 
+       </div>  
     </form>
 </div>

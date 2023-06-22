@@ -1,6 +1,7 @@
+
 <div fxLayoutAlign="center center" fxFlexFill class="main-div">
     <mat-card fxFlex="25" fxFlex.lt-md="90" >
-        <mat-toolbar color="primary">Sign Up </mat-toolbar>
+        <mat-toolbar color="primary">Guest user</mat-toolbar>
         <form fxLayoutAlign="stretch" fxLayout="column" class="signup-form" [formGroup]="signupForm" (ngSubmit)="signUp(signUpData)">
             <mat-form-field >
               <input formControlName="name" matInput type="text" placeholder="Name" required>
@@ -29,6 +30,6 @@
 
             <button mat-raised-button style="background-color: green;color: whitesmoke;" type="submit">Sign Up</button>
         </form> 
-        <h3 class="btn-last">Have an account? <a routerLink="/login">Login</a>  </h3>  
+        <h3 class="btn-last">Aleardy an user? <a routerLink="/login" style="text-decoration: none;">Login</a>  </h3>  
     </mat-card>
 </div>

@@ -1,0 +1,118 @@
+<div class="container1">
+<div class="image-container">
+  <img src="assets/img/Sunrise PG.jpg" height="650px" width="1343px">
+</div>
+</div>
+<div class="container">
+<form [formGroup]="callRequestForm" (ngSubmit)="submit()">
+<div class="overlay">
+  <h2>Call Back Request</h2>
+        <mat-form-field >
+            <mat-label>Branch</mat-label>
+            <mat-select formControlName="branch">
+              <mat-option *ngFor="let branch of branches" [value]="branch">
+                {{branch}}
+              </mat-option>
+            </mat-select>
+            
+        </mat-form-field>
+   
+
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" name="name" formControlName="name" >
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Mobile</mat-label>
+      <input matInput type="text" name="mobile" formControlName="mobile" >
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="email" name="email" formControlName="email" >
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Message</mat-label>
+      <textarea matInput name="message" formControlName="message" placeholder="Message" style="width: auto;height:70px;" ></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit"   class=".image-fit" style="background-color: rgb(11, 122, 11); color: white;">Submit</button>
+ 
+</div>
+</form>
+
+<div class="content-part">
+<div class="heading">
+  <h1 style="font-size: 35px; color: #ff8a1d;"><b>Welcome To Sunrise Colive PG</b></h1>
+</div>
+
+<div class="content">
+  <h3>Welcome to Sunrise Colive PG, your home away from home. Our comfortable and fully furnished PG accommodations are designed to meet all your needs, providing a safe and secure living environment.</h3>
+</div>
+
+<div class="content-2"><h3>
+Our PGs are located in prime areas of the city, close to public transportation, restaurants, and 
+shopping centres. We offer a range of rooms to choose from, including single and shared accommodations, 
+all equipped with modern amenities such as Fridge, Washing Machine, Cloths Dryer, 24/7 Hot Water, 
+Gym, Wi-Fi, RO Water and 24/7 power backup. Inside room facilities Smart TV, TV Stand, Computer Table, 
+Chair, Wardrobe, Spring Mattress (Branded).
+</h3></div>
+
+<div>
+  <h3>
+    At Sunrise Colive PG, we understand that your comfort and safety are our top priorities. That's why we provide 
+    round-the-clock security, CCTV surveillance, and maintenance services. Our dedicated staff is always 
+    available to assist you with any concerns you may have. In addition to comfortable living spaces, 
+    we also offer a range of facilities to make your stay more enjoyable. Our common areas include a 
+    fully equipped kitchen, dining area, Table Tennis and Foosball, where you can relax and socialize with other 
+    residents. Whether you're a student, working professional, or just looking for a comfortable place
+     to call home, Sunrise Colive PG is the perfect choice. So why wait? Book your stay with us today and experience 
+     the ultimate PG living experience.
+  </h3>
+</div>
+
+<div>
+  <p class="center_title-1">Why Choose Our PG</p>
+  <div>
+    <p class="center_title-2">We are providing the best and more affordale stay for ladies & Gents</p>
+  </div>
+</div>
+
+<div class="context-3" style="font-style: italic;">
+  <div class="left-text">
+    <h3>24 Hrs Security</h3>
+    <h3>Power Backup</h3>
+    <h3>Essential Infrastructure</h3>
+    <h3>24 Hrs Hot water</h3>
+  </div>
+  <div class="center-text" style="text-align: center;">
+    <h3>CCTV Surveillance</h3>
+    <h3>House Keeping & Maintenance</h3>
+    <h3>Self-Cooking</h3>
+    <h3>Power Backup</h3>
+  </div>
+  <div class="right-text">
+    <h3>Free WiFi</h3>
+    <h3>Laundary</h3>
+    <h3>Refrigerator</h3>
+    <h3>3Times South and North Indian Food</h3>
+  </div>
+</div>
+
+</div>
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+    

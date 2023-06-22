@@ -1,3 +1,4 @@
+
 <div fxLayoutAlign="center center" fxFlexFill class="main-div" class="container">
     <mat-card fxFlex="25" fxFlex.lt-md="90">
         <mat-toolbar color="primary">Login page</mat-toolbar>
@@ -20,6 +21,6 @@
             </mat-form-field>
             <button [disabled]="!loginForm.valid" mat-raised-button style="background-color: green;color: whitesmoke;" type="submit">Login</button>
         </form>  
-       <h3> Don't have an account? <a routerLink="/signup">Signup</a>  </h3>
+        <h3>  Login as guest user? <a routerLink="/signup" style="text-decoration: none;">Signup</a>  </h3>
     </mat-card>
 </div>

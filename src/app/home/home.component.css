@@ -1,0 +1,190 @@
+.content-part{
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: calc(100% - 10px);
+}
+
+
+.context-3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-size: 40pxpx;
+  margin-left: 40px;
+  margin-right: 0;
+  width: calc(100% - 40px); 
+  
+}
+
+.left-text, .right-text {
+  flex-grow: 1;
+  
+}
+
+.center-text {
+  flex-grow: 2;
+  text-align: center;
+  margin-right: 0;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container1 {
+  position: relative;
+  display: inline-block;
+}
+/* .overlay {
+  position: absolute;
+  top: 30px;
+  margin-left: 75%;
+  width: 400px;
+  background-color: rgb(213, 206, 192);
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  
+} */
+
+.container {
+  margin-bottom: 40px; 
+  margin-left: 0px;
+  margin-right: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 100px;
+  margin-left: 65%;
+  width: 370px;
+  background-color: rgb(213, 206, 192);
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  
+}
+
+.overlay h2 {
+  margin-bottom: 10px;
+  
+}
+
+.overlay form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.overlay button {
+  margin-top: 10px;
+}
+
+.overlay mat-form-field {
+  width: 100%; 
+}
+
+
+
+.container {
+  margin-bottom: 40px; 
+  margin-left: 0px;
+  margin-right: 0;
+}
+
+.content {
+   margin-top: 40px;  
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+
+.mat-toolbar-row {
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex-grow: 1;
+  }
+  
+  .links {
+    display: flex;
+    align-items: center;
+  }
+
+  
+  button {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+
+ .center_title-2{
+    font-size: 20px;
+    line-height: 28px;
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+    color: #242424;
+    letter-spacing: .48px;
+    text-align: center;
+}
+
+.center_title-1{
+  font-size: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #0aa4e3;
+  letter-spacing: .96px;
+  position: relative;
+  padding-bottom: 10px;
+  text-align: center;
+} 
+
+
+
+  
+  
+.container {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 30px;
+
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.container1 {
+  position: relative;
+  display: inline-block;
+  
+}
+
+
+
+
+
+
+
+

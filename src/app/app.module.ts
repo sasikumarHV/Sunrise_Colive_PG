@@ -30,11 +30,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SignupComponent } from './signup/signup.component';
 import { AgePipe } from './age.pipe';
 import { CommonModule, CurrencyPipe } from '@angular/common';
-
-
-
-
-
+import { HomeComponent } from './home/home.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { ContactusComponent } from './contactus/contactus.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { AmenitiesComponent } from './aminities/amenities.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { PackagesComponent } from './packages/packages.component';
+import { ChunkPipe } from './chunk.pipe';
+import { CallrequestComponent } from './callrequest/callrequest.component';
 
 
 @NgModule({
@@ -45,7 +49,15 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
     UserDetailsComponent,
     LoginComponent,
     SignupComponent,
-    AgePipe
+    AgePipe,
+    HomeComponent,
+    ContactusComponent,
+    GalleryComponent,
+    AmenitiesComponent,
+    AboutusComponent,
+    PackagesComponent,
+    ChunkPipe,
+    CallrequestComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,12 +84,10 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
     MatChipsModule,
     FlexLayoutModule,
     CommonModule,
-
- 
+    MatMenuModule,
   
- 
   ],
-  providers: [AgePipe, CurrencyPipe],
+  providers: [AgePipe, CurrencyPipe,ChunkPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

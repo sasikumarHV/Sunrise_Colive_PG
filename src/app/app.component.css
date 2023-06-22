@@ -1,0 +1,101 @@
+.mat-toolbar-row {
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-size button {
+    margin-right: 10px;
+    font-size: 17px;
+  }
+  
+  .spacer {
+    flex-grow: 10;
+  }
+
+  .b-toolbar {
+    height: 40px; /* Adjust the height as desired */
+    margin-top: 50px;
+  }
+  
+  .b-toolbar p {
+    font-size: 15px; /* Adjust the font size as desired */
+  }
+
+.row footer-hline{
+  margin-top: 50px;
+  
+}
+
+.row.footer-hline {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer-hline .f_widget {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.footer-hline .f_title {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.footer-hline h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-hline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-hline ul li {
+  margin-bottom: 10px;
+}
+
+.footer-hline ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-hline ul li a:hover {
+  color: #333;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-text i {
+  margin-right: 10px;
+}
+
+.footer-text.f-s-20 {
+  font-size: 20px;
+}
+
+.col-md-3 col-xs-6{
+  font-size: 20px;
+}
+.ab_wd_list{
+  margin-left: 15px;
+  font-style: normal;
+  font-size: 19px;
+}
+
+
+
+
+
+  

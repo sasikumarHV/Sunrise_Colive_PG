@@ -1,0 +1,23 @@
+<div class="image-container">
+    <img src="./assets/images/img20.jpg" alt="First Image">
+    <img src="./assets/images/img21.png" alt="Second Image">
+</div>
+<div class="content-1">
+    <p><b>Note : </b>All Rooms Are Fully Furnished With The Following Amenities</p>
+</div>
+
+<div>
+      <div class="facility-container" >
+        <mat-card *ngFor="let facility of facilities" class="facility-card" style="background-color: rgb(215, 242, 243);">
+          <mat-card-content>
+            <div class="facility-icon-container">
+              <mat-icon class="facility-icon">{{ facility.icon }}</mat-icon>
+            </div>
+            <p class="facility-name">{{ facility.name }}</p>
+            <p class="facility-description">{{ facility.description }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>  
+</div>
+  
+

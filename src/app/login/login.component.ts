@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit  {
       if(user){
       
         this.loginForm.reset();
-        this.router.navigate(['register'])
+        this.router.navigate(['home'])
       }else{
         alert("user not found");
       }

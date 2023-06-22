@@ -1,3 +1,26 @@
+
+.mat-toolbar-row {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+
+.button-container {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
 mat-form-field{
     width:100%;
     padding-bottom:4%;  
@@ -19,10 +42,17 @@ mat-form-field{
    
   }
 
-  .button-container {
+  .button-container1 {
     display: flex;
-    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+    margin-right: 38px;
   }
+  
+  .button-wrapper {
+    margin-left: auto;
+  }
+  
   .registration-form {
     margin: 3% 3%;
     padding: 4%;
@@ -42,9 +72,17 @@ mat-form-field{
       bottom: 20px;
       left: 0;
       right: 0;
- 
-    
   }
+  @media screen and (max-width: 600px) {
+    .logo {
+      font-size: 20px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  
   
   
   

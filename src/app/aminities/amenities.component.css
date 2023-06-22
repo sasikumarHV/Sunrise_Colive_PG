@@ -1,0 +1,60 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px; 
+  }
+.content-1{
+    margin-left: 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}  
+  
+  .image-container img {
+    width: 50%; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    height: 300px;
+  }
+  
+  .facility-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .facility-card {
+    width: 30%;
+    margin: 10px;
+    height: 200px;
+  }
+  
+  .facility-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
+    
+  }
+  
+  .facility-icon {
+    font-size: 26px;
+  }
+  
+  .facility-name {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .facility-description {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  

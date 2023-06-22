@@ -1,0 +1,12 @@
+<div class="gallery">
+  <div class="row" *ngFor="let row of images | chunk: 3">
+    <div class="col" *ngFor="let image of row">
+      <div class="image-container">
+        <img [src]="image.url" alt="Gallery Image">
+        <p class="image-name">{{ image.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  

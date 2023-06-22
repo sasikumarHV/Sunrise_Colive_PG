@@ -1,0 +1,28 @@
+table {
+  width: 100%;
+  border-collapse: collapse; /* Add this line to collapse table borders */
+  border: 1px solid #858484; /* Add this line to set border properties */
+  margin: 0 10px;
+  margin: 10px 0;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+mat-elevation-z8 {
+  margin-left: 10px;
+}
+
+.filter-spacer {
+  width: 240px;
+  flex: 1; /* Add this line to make the filter bar take up remaining space */
+  display: flex;
+  justify-content: flex-end; /* Add this line to align the content to the right */
+  margin-top: 12px;
+  margin-left: 1100px; /* Add this line to create spacing on the right side */
+}
+
+
+  

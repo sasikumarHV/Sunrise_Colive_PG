@@ -13,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class HomeComponent implements OnInit {
   callRequestForm!: FormGroup;
   displayedColumns: string[] = ['branch', 'name', 'mobile', 'email', 'message'];
-  public branches = ['Marathalli', 'Whitefeild', 'Hopefarm'] ;
+  public branches = ['Marathalli, Bangalore', 'Whitefeild, Bangalore', 'Electronic City, Bangalore','Hopefarm, Bangalore'] ;
   dataSource = new MatTableDataSource<any>();
 
   constructor(

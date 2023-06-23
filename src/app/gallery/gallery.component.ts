@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class GalleryComponent {
   images: { url: string, name: string }[] = [
     {url:'assets/images/img8.jpg.JPG',name:'Single Sharing room'},
-    {url:'assets/images/img1.jpg.JPG',name: 'Double Sharing room'},
+    {url:'assets/images/img1.jpg.JPG',name: 'Two Sharing room'},
     {url:'assets/images/img2.jpg.JPG', name: 'Three Sharing room'},
     {url:'assets/images/img6.jpg.JPG',name:'Lobby'},
     {url:'assets/images/img9.jpg.JPG',name:'Three Sharing room'},

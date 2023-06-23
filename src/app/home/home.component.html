@@ -1,41 +1,40 @@
 <div class="container1">
-<div class="image-container">
-  <img src="assets/img/Sunrise PG.jpg" height="650px" width="1343px">
-</div>
+  <div class="image-container">
+     <img src="assets/img/Sunrise PG.jpg" height="650px" width="1343px">
+  </div>
 </div>
 <div class="container">
-<form [formGroup]="callRequestForm" (ngSubmit)="submit()">
-<div class="overlay">
-  <h2>Call Back Request</h2>
+  <form [formGroup]="callRequestForm" (ngSubmit)="submit()">
+    <div class="overlay">
+      <h2>Call Back Request</h2>
+
         <mat-form-field >
             <mat-label>Branch</mat-label>
-            <mat-select formControlName="branch">
-              <mat-option *ngFor="let branch of branches" [value]="branch">
-                {{branch}}
-              </mat-option>
-            </mat-select>
-            
-        </mat-form-field>
-   
+              <mat-select formControlName="branch">
+                <mat-option *ngFor="let branch of branches" [value]="branch">
+                  {{branch}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+        <mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Name</mat-label>
+    <mat-label>Name</mat-label>
       <input matInput type="text" name="name" formControlName="name" >
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Mobile</mat-label>
-      <input matInput type="text" name="mobile" formControlName="mobile" >
+        <input matInput type="text" name="mobile" formControlName="mobile" >
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Email</mat-label>
-      <input matInput type="email" name="email" formControlName="email" >
+        <input matInput type="email" name="email" formControlName="email" >
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Message</mat-label>
-      <textarea matInput name="message" formControlName="message" placeholder="Message" style="width: auto;height:70px;" ></textarea>
+        <textarea matInput name="message" formControlName="message" placeholder="Message" style="width: auto;height:70px;" ></textarea>
     </mat-form-field>
 
     <button mat-raised-button type="submit"   class=".image-fit" style="background-color: rgb(11, 122, 11); color: white;">Submit</button>
@@ -44,9 +43,9 @@
 </form>
 
 <div class="content-part">
-<div class="heading">
-  <h1 style="font-size: 35px; color: #ff8a1d;"><b>Welcome To Sunrise Colive PG</b></h1>
-</div>
+  <div class="heading">
+    <h1 style="font-size: 35px; color: #ff8a1d;"><b>Welcome To Sunrise Colive PG</b></h1>
+  </div>
 
 <div class="content">
   <h3>Welcome to Sunrise Colive PG, your home away from home. Our comfortable and fully furnished PG accommodations are designed to meet all your needs, providing a safe and secure living environment.</h3>
@@ -101,7 +100,88 @@ Chair, Wardrobe, Spring Mattress (Branded).
   </div>
 </div>
 
+<div class="explor_title row m0">
+  <div class="col-md-6 text-center">
+    <div class="center_ex_title" style="margin-bottom: 20px;">
+      <b><h2 class="center_title-1">Explore our <span>rooms</span></h2></b>
+      <p class="center_title-2">Choose a room according to your budget</p>
+    </div>
+  </div>
+  <div class="col-md-4 text-right">
+    <a class="about_btn_b border-radius-50" href="/gallery">
+      <button>View Photos</button>
+    </a>
+  </div>
 </div>
+
+
+
+
+
+<section class="explor_room_area">
+  <div class="container">
+    <div class="row explor_room_item_inner">
+      <div class="col-md-4 col-sm-12">
+        <div class="explor_item"  style="margin-bottom: 20px;">
+          <img src="assets/images/img8.jpg.JPG" alt="Single Sharing Room" width="250px" height="300px">
+          <div class="explor_text">
+            <h4>Single Sharing Room</h4>
+            <ul>
+              <li><span class="f-w-600">Advance</span></li>
+              <li>Same as Room Rent Per Sharing</li>
+              <li><span class="f-w-600">Refundable</span> from the advance <span class="f-w-600">₹3000*</span> will be deducted while vacating time</li>
+            </ul>
+            <div class="explor_footer">
+              <div class="pull-left">
+                <span>Starts from</span>
+                <h3 class="f-s-16">₹16,000 <span>/ Month</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="explor_item"  style="margin-bottom: 20px;">
+          <img src="assets/images/img1.jpg.JPG" alt="2 Sharing Room" width="250px" height="300px">
+          <div class="explor_text">
+            <h4>2 Sharing Room</h4>
+            <ul>
+              <li><span class="f-w-600">Advance</span></li>
+              <li>Same as Room Rent Per Sharing</li>
+              <li><span class="f-w-600">Refundable</span> from the advance <span class="f-w-600">₹2000*</span> will be deducted while vacating time</li>
+            </ul>
+            <div class="explor_footer">
+              <div class="pull-left">
+                <span>Starts from</span>
+                <h3 class="f-s-16">₹9,500 <span>/ Month</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="explor_item"  style="margin-bottom: 20px;">
+          <img src="assets/images/img9.jpg.JPG" alt="3 Sharing Room" width="250px" height="300px">
+          <div class="explor_text">
+            <h4>3 Sharing Room</h4>
+            <ul>
+              <li><span class="f-w-600">Advance</span></li>
+              <li>Same as Room Rent Per Sharing</li>
+              <li><span class="f-w-600">Refundable</span> from the advance <span class="f-w-600">₹2000*</span> will be deducted while vacating time</li>
+            </ul>
+            <div class="explor_footer">
+              <div class="pull-left">
+                <span>Starts from</span>
+                <h3 class="f-s-16">₹7,000 <span>/ Month</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
   

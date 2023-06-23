@@ -144,7 +144,7 @@ body, html {
     font-style: italic;
     color: #242424;
     letter-spacing: .48px;
-    text-align: center;
+    text-align: left;
 }
 
 .center_title-1{
@@ -156,7 +156,9 @@ body, html {
   letter-spacing: .96px;
   position: relative;
   padding-bottom: 10px;
-  text-align: center;
+  text-align: left;
+  margin-top: 30px;
+  
 } 
 
 
@@ -180,6 +182,122 @@ body, html {
   display: inline-block;
   
 }
+
+/* Styles for the Explore Rooms section */
+.explor_room_area {
+  padding: 20px 0;
+}
+
+.explor_title {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.center_ex_title {
+  text-align: center;
+}
+
+.center_ex_title h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color:#0aa4e3 ;
+}
+
+.center_ex_title p {
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.about_btn_b {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.about_btn_b button {
+  font-size: 16px;
+  padding: 12px 30px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.about_btn_b button:hover {
+  background-color: #555;
+}
+
+.explor_room_item_inner {
+  margin-top: 30px;
+}
+
+.explor_item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.explor_item img {
+  width: 100%;
+  height: auto;
+}
+
+.explor_text {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.explor_text h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.explor_text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.explor_text ul li {
+  margin-bottom: 5px;
+}
+
+.explor_text .f-w-600 {
+  font-weight: 600;
+}
+
+.explor_footer {
+  margin-top: 20px;
+}
+
+.explor_footer .pull-left span {
+  font-size: 14px;
+}
+
+.explor_footer .pull-left h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+
+.explor_item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.pull-left{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
 
 
 

@@ -1,5 +1,5 @@
 
-<div fxLayoutAlign="center center" fxFlexFill class="main-div" class="container">
+<div fxLayoutAlign="center center" fxFlexFill class="main-div" class="container" *ngIf="isLoginPage">
     <mat-card fxFlex="25" fxFlex.lt-md="90">
         <mat-toolbar color="primary">Login page</mat-toolbar>
         <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="login()" [formGroup]="loginForm">

@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit  {
 
   public loginForm!: FormGroup
   registerForm: any;
+  isLoginPage: boolean = true;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private http : HttpClient) {}
 

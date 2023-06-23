@@ -17,10 +17,10 @@
       "id": 1
     },
     {
-      "firstName": "Samvedhya",
-      "lastName": "Bendapudi",
-      "mobile": "06784531901",
-      "email": "samvedhyabendapudi@gmail.com",
+      "firstName": "Manju",
+      "lastName": "Dhara",
+      "mobile": "8974903267",
+      "email": "manjudhara@gmail.com",
       "joiningDate": "2023-02-28T18:30:00.000Z",
       "leavingDate": "2023-11-29T18:30:00.000Z",
       "workplaceLocation": "Cognizant, BMC Tech park",
@@ -29,7 +29,7 @@
       "state": "Andhra Pradesh",
       "country": "India",
       "pincode": "560035",
-      "gender": "Female",
+      "gender": "Male",
       "id": 2
     },
     {
@@ -49,22 +49,6 @@
       "id": 3
     },
     {
-      "firstName": "namitha",
-      "lastName": "D",
-      "mobile": "7654091047",
-      "email": "namithaD@gmail.com",
-      "joiningDate": "2023-04-11T18:30:00.000Z",
-      "leavingDate": "2023-09-18T18:30:00.000Z",
-      "workplaceLocation": "NTT Data",
-      "roomNo": "103",
-      "city": "Pune",
-      "state": "Maharastra",
-      "country": "India",
-      "pincode": "690345",
-      "gender": "Female",
-      "id": 4
-    },
-    {
       "firstName": "John",
       "lastName": "Doe",
       "mobile": "1986590457",
@@ -78,7 +62,7 @@
       "country": "USA",
       "pincode": "765438",
       "gender": "Male",
-      "id": 5
+      "id": 4
     },
     {
       "firstName": "Andrew",
@@ -94,7 +78,7 @@
       "country": "China",
       "pincode": "765438",
       "gender": "Male",
-      "id": 6
+      "id": 5
     }
   ],
   "signupUsers": [
@@ -145,5 +129,4 @@
       "id": 2
     }
   ]
-  
 }

@@ -17,7 +17,7 @@
 
   .b-toolbar {
     height: 40px; /* Adjust the height as desired */
-    margin-top: 50px;
+    margin-top: 10px;
   }
   
   .b-toolbar p {
@@ -92,6 +92,14 @@
   margin-left: 15px;
   font-style: normal;
   font-size: 19px;
+}
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
 }
 
 

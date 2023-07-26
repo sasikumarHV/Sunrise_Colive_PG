@@ -1,35 +1,40 @@
-
-<div fxLayoutAlign="center center" fxFlexFill class="main-div">
-    <mat-card fxFlex="25" fxFlex.lt-md="90" >
-        <mat-toolbar color="primary">Guest user</mat-toolbar>
-        <form fxLayoutAlign="stretch" fxLayout="column" class="signup-form" [formGroup]="signupForm" (ngSubmit)="signUp(signUpData)">
-            <mat-form-field >
-              <input formControlName="name" matInput type="text" placeholder="Name" required>
-              <mat-error *ngIf="signupForm.controls['name'].errors?.['required']">Name is required</mat-error>
-              <mat-error *ngIf="signupForm.controls['name']?.errors?.['pattern']">Invalid name format</mat-error>
-            </mat-form-field>
-
-            <mat-form-field >
-                <input formControlName="mobile" matInput  placeholder="Mobile" required>
-                <mat-error *ngIf="signupForm.controls['mobile'].errors?.['required']">Mobile number is required</mat-error>
-                <mat-error *ngIf="signupForm.controls['mobile']?.errors?.['pattern']">Invalid mobile number format</mat-error>
-              </mat-form-field>
-
-            <mat-form-field >
-                <input formControlName="email" matInput type="text" placeholder="email"  required>
-                <mat-error *ngIf ="signupForm.controls['email'].errors?.['required']">email is required</mat-error>
-                <mat-error *ngIf="signupForm.controls['email']?.errors?.['pattern']">Invalid email format</mat-error>
-            </mat-form-field>
-          
-            <mat-form-field >
-              <input formControlName="password" matInput type="password" placeholder="Password" required>
-              <mat-error *ngIf="signupForm.controls['password'].errors?.['required']">password is required</mat-error>
-              <mat-error *ngIf="signupForm.controls['password'].errors?.['pattern']">Invalid password format</mat-error>
-            </mat-form-field>
-
-
-            <button mat-raised-button style="background-color: green;color: whitesmoke;" type="submit">Sign Up</button>
-        </form> 
-        <h3 class="btn-last">Aleardy an user? <a routerLink="/login" style="text-decoration: none;">Login</a>  </h3>  
-    </mat-card>
+<div>
+  <img [src]="url" class="header-image" height="600px" width="1265px">
 </div>
+<div style="display: flex; position: relative;">
+ 
+  <div fxLayoutAlign="center center" fxFlexFill class="main-div" style="margin-top: 5px;">
+    <mat-card fxFlex="25" fxFlex.lt-md="90" style="position: absolute;  left: 50%; transform: translate(-50%, -50%); ">
+      <mat-toolbar style="color: grey;">Sign Up</mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout="column" class="signup-form" [formGroup]="signupForm" (ngSubmit)="signUp(signUpData)">
+        <mat-form-field>
+          <input formControlName="name" matInput type="text" placeholder="Name" required>
+          <mat-error *ngIf="signupForm.controls['name'].errors?.['required']">Name is required</mat-error>
+          <mat-error *ngIf="signupForm.controls['name'].errors?.['pattern']">Invalid name format</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input formControlName="mobile" matInput placeholder="Mobile" required>
+          <mat-error *ngIf="signupForm.controls['mobile'].errors?.['required']">Mobile number is required</mat-error>
+          <mat-error *ngIf="signupForm.controls['mobile'].errors?.['pattern']">Invalid mobile number format</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input formControlName="email" matInput type="text" placeholder="Email" required>
+          <mat-error *ngIf="signupForm.controls['email'].errors?.['required']">Email is required</mat-error>
+          <mat-error *ngIf="signupForm.controls['email'].errors?.['pattern']">Invalid email format</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input formControlName="password" matInput type="password" placeholder="Password" required>
+          <mat-error *ngIf="signupForm.controls['password'].errors?.['required']">Password is required</mat-error>
+          <mat-error *ngIf="signupForm.controls['password'].errors?.['pattern']">Invalid password format</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button style="background-color: green; color: whitesmoke;" type="submit">Sign Up</button>
+      </form>
+      <h3 class="btn-last">Already a user? <a routerLink="/login" style="text-decoration: none;">Login</a></h3>
+    </mat-card>
+  </div>
+</div>
+

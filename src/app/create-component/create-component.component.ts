@@ -16,6 +16,7 @@ export class CreateComponentComponent implements OnInit {
   public countries=["USA","UK","Australia","Japan","India","China","Rusia"];
   public genders=["Male","Female","Others"];
   public roomNos=["101","102","103","104","105","201","202","203","204","205","301","302","303","304","305","401","402","403","404","405"]
+  public branches = ['Marathalli, Bangalore', 'Whitefeild, Bangalore', 'Electronic City, Bangalore','Hopefarm, Bangalore'] ;
 
   public registerForm!: FormGroup
   private userIdToUpdate!: number;
@@ -45,6 +46,7 @@ export class CreateComponentComponent implements OnInit {
       country: new FormControl("",{ validators : [Validators.required]}),
       pincode: new FormControl("",{ validators : [Validators.required,Validators.pattern('^[0-9]{6}$'),Validators.minLength(6),Validators.maxLength(6)]}),
       gender: new FormControl("",{ validators : [Validators.required]}),
+      branch:new FormControl("",{ validators : [Validators.required]}),
 
     });
 
@@ -72,6 +74,7 @@ export class CreateComponentComponent implements OnInit {
       pincode:user.pincode,
       country:user.country,
       gender:user.gender,
+      branch:user.branch,
     }) ;
   }
 
@@ -148,6 +151,10 @@ get Pincode(): FormControl{
 
 get Gender(): FormControl{
   return this.registerForm.get('gender') as FormControl;
+}
+
+get Branch(): FormControl{
+  return this.registerForm.get('branch') as FormControl;
 }
 
 

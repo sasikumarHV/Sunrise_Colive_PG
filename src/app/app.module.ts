@@ -39,6 +39,14 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { PackagesComponent } from './packages/packages.component';
 import { ChunkPipe } from './chunk.pipe';
 import { CallrequestComponent } from './callrequest/callrequest.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ReservenowComponent } from './reservenow/reservenow.component';
+import { VisitComponent } from './visit/visit.component';
+import { PrereserveComponent } from './prereserve/prereserve.component';
+import { VisittableComponent } from './visittable/visittable.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -58,6 +66,13 @@ import { CallrequestComponent } from './callrequest/callrequest.component';
     PackagesComponent,
     ChunkPipe,
     CallrequestComponent,
+    TestimonialsComponent,
+    FeedbackComponent,
+    ReservenowComponent,
+    VisitComponent,
+    PrereserveComponent,
+    VisittableComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,6 +100,7 @@ import { CallrequestComponent } from './callrequest/callrequest.component';
     FlexLayoutModule,
     CommonModule,
     MatMenuModule,
+    MatDialogModule,
   
   ],
   providers: [AgePipe, CurrencyPipe,ChunkPipe],

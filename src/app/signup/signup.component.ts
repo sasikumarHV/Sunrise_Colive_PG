@@ -21,7 +21,8 @@ signUpData: any;
       mobile: ['', [Validators.required, Validators.pattern('[0-9].*')]],
       email: ['', [Validators.required, Validators.email]],
       password: ['',[Validators.required,Validators.minLength(6),Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$')]
-      ]
+      ],
+      isActiveUser:this.formBuilder.control(false)
     })
   }
   signUp(signUpData:void){
@@ -48,6 +49,7 @@ signUpData: any;
       );
     }
   }
+  url:string="./assets/img/loginpage.jpg" ;alt="First Image";
 
   }
 

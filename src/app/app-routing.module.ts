@@ -12,6 +12,11 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PackagesComponent } from './packages/packages.component';
 import { CallrequestComponent } from './callrequest/callrequest.component';
+import { ReservenowComponent } from './reservenow/reservenow.component';
+import { PrereserveComponent } from './prereserve/prereserve.component';
+import { VisitComponent } from './visit/visit.component';
+import { VisittableComponent } from './visittable/visittable.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -28,6 +33,11 @@ const routes: Routes = [
   {path:'callreturn',component:CallrequestComponent},
   { path: 'update/:id', component: CreateComponentComponent },
   {path:'details/:id' ,component:UserDetailsComponent},
+  {path:'reservenowform', component:ReservenowComponent},
+  {path:'prereserve', component:PrereserveComponent},
+  {path:'visitform', component:VisitComponent},
+  {path:'visittable',component:VisittableComponent},
+  {path:'admin', component:AdminComponent},
   
   
 ];

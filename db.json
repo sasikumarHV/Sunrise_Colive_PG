@@ -5,15 +5,16 @@
       "lastName": "Peddireddy",
       "mobile": "8688751181",
       "email": "sasikumarpeddireddy373@gmail.com",
-      "joiningDate": "2023-05-03T18:30:00.000Z",
-      "leavingDate": "2023-06-29T18:30:00.000Z",
+      "joiningDate": "2023-06-13T18:30:00.000Z",
+      "leavingDate": "2023-08-30T18:30:00.000Z",
       "workplaceLocation": "Hitachi",
-      "roomNo": "101",
+      "roomNo": "104",
       "city": "Bangalore",
       "state": "Karnataka",
       "country": "India",
       "pincode": "560037",
       "gender": "Male",
+      "branch": "Whitefeild, Bangalore",
       "id": 1
     },
     {
@@ -21,93 +22,118 @@
       "lastName": "Dhara",
       "mobile": "8974903267",
       "email": "manjudhara@gmail.com",
-      "joiningDate": "2023-02-28T18:30:00.000Z",
-      "leavingDate": "2023-11-29T18:30:00.000Z",
-      "workplaceLocation": "Cognizant, BMC Tech park",
-      "roomNo": "103",
+      "joiningDate": "2023-06-30T18:30:00.000Z",
+      "leavingDate": "2023-09-29T18:30:00.000Z",
+      "workplaceLocation": "Cognizant, ITPL",
+      "roomNo": "104",
       "city": "Vizag",
       "state": "Andhra Pradesh",
       "country": "India",
       "pincode": "560035",
       "gender": "Male",
+      "branch": "Hopefarm, Bangalore",
       "id": 2
-    },
-    {
-      "firstName": "navneeth",
-      "lastName": "N",
-      "mobile": "8756904532",
-      "email": "navneeth34@gmail.com",
-      "joiningDate": "2023-04-04T18:30:00.000Z",
-      "leavingDate": "2023-09-13T18:30:00.000Z",
-      "workplaceLocation": "Hitachi, Embassy Heights",
-      "roomNo": "102",
-      "city": "Bangalore",
-      "state": "Karnataka",
-      "country": "India",
-      "pincode": "560075",
-      "gender": "Male",
-      "id": 3
-    },
-    {
-      "firstName": "John",
-      "lastName": "Doe",
-      "mobile": "1986590457",
-      "email": "johndoe@gmail.com",
-      "joiningDate": "2023-05-31T18:30:00.000Z",
-      "leavingDate": "2023-08-23T18:30:00.000Z",
-      "workplaceLocation": "Visa , BMC Tech park",
-      "roomNo": "202",
-      "city": "Newyork",
-      "state": "Washington DC",
-      "country": "USA",
-      "pincode": "765438",
-      "gender": "Male",
-      "id": 4
     },
     {
       "firstName": "Andrew",
       "lastName": "Json",
       "mobile": "1567340976",
       "email": "andrewjson21@gmail.com",
-      "joiningDate": "2023-04-11T18:30:00.000Z",
-      "leavingDate": "2023-09-27T18:30:00.000Z",
-      "workplaceLocation": "Hitachi , Richmond circle",
-      "roomNo": "105",
-      "city": "shanghai",
-      "state": "beijing",
-      "country": "China",
+      "joiningDate": "2023-06-29T18:30:00.000Z",
+      "leavingDate": "2023-07-30T18:30:00.000Z",
+      "workplaceLocation": "Visa, BMC tech park",
+      "roomNo": "104",
+      "city": "Newyork",
+      "state": "Washington DC",
+      "country": "USA",
       "pincode": "765438",
       "gender": "Male",
+      "branch": "Marathalli, Bangalore",
+      "id": 3
+    },
+    {
+      "firstName": "navneeth",
+      "lastName": "N",
+      "mobile": "8756904532",
+      "email": "navneeth34@gmail.com",
+      "joiningDate": "2023-02-28T18:30:00.000Z",
+      "leavingDate": "2023-10-30T18:30:00.000Z",
+      "workplaceLocation": "Hitachi, Richmond circle",
+      "roomNo": "204",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": "560075",
+      "gender": "Male",
+      "branch": "Hopefarm, Bangalore",
+      "id": 4
+    },
+    {
+      "firstName": "pavan",
+      "lastName": "teja",
+      "mobile": "8688735182",
+      "email": "pavanteja73@gmail.com",
+      "joiningDate": "2023-06-14T18:30:00.000Z",
+      "leavingDate": "2023-09-11T18:30:00.000Z",
+      "workplaceLocation": "Amazon, BMC",
+      "roomNo": "303",
+      "city": "Nellore",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "pincode": "534222",
+      "gender": "Male",
+      "branch": "Electronic City, Bangalore",
       "id": 5
+    },
+    {
+      "firstName": "jay",
+      "lastName": "sai",
+      "mobile": "9234567890",
+      "email": "jaysai@gmail.com",
+      "joiningDate": "2023-05-31T18:30:00.000Z",
+      "leavingDate": "2023-09-29T18:30:00.000Z",
+      "workplaceLocation": "Dell, BMC tech park",
+      "roomNo": "302",
+      "city": "Vizag",
+      "state": "Andhra Pradesh",
+      "country": "India",
+      "pincode": "545002",
+      "gender": "Male",
+      "branch": "Marathalli, Bangalore",
+      "id": 6
     }
   ],
   "signupUsers": [
-    {
-      "name": "admin",
-      "mobile": "1234567890",
-      "email": "admin@gmail.com",
-      "password": "12345",
-      "id": 1
-    },
     {
       "name": "sasi",
       "mobile": "8688751190",
       "email": "sasi@gmail.com",
       "password": "Psasi123@",
-      "id": 2
+      "isAdminUser": "false",
+      "id": 1
     },
     {
       "name": "navneeth",
       "mobile": "8790563498",
       "email": "navneeth@gmail.com",
       "password": "Navneeth123@",
-      "id": 3
+      "isAdminUser": "false",
+      "id": 2
     },
     {
       "name": "Vineetha Reddy",
       "mobile": "06309532566",
       "email": "vineethareddy@gamil.com",
       "password": "Vineetha123@",
+      "isAdminUser": "false",
+      "id": 3
+    },
+    {
+      "name": "admin",
+      "mobile": "8979674531",
+      "email": "admin@gmail.com",
+      "password": "Admin@123",
+      "isAdminUser": "true",
       "id": 4
     }
   ],
@@ -125,6 +151,138 @@
       "name": "Manju Dhara",
       "mobile": "8974903267",
       "email": "manjudhara@gmail.com",
+      "message": "looking for pg",
+      "id": 2
+    }
+  ],
+  "feedback": [
+    {
+      "name": "Sasi Kumar",
+      "email": "sasikumarpeddireddy@gmail.com",
+      "message": "It was a good experience staying in Sunrise Pg. It was affordable and Management maintaining Health Food. Maintaing all safety precautions.",
+      "id": 1
+    },
+    {
+      "name": "Naveen",
+      "email": "naveenk@gmail.com",
+      "message": "The service provided was excellent. I am very satisfied with the product!",
+      "id": 2
+    },
+    {
+      "name": "Samvedhya",
+      "email": "samvedhyabendapudi@gmail.com",
+      "message": "I had a great experience with your customer support team. They were very helpful and resolved my issue quickly.",
+      "id": 3
+    },
+    {
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@gmail.com",
+      "message": "The PG facilities are fantastic, and the management is very cooperative. I had a great stay at the hostel.",
+      "id": 4
+    },
+    {
+      "name": "Namitha",
+      "email": "namitha@gmail.com",
+      "message": "I had a wonderful experience staying at this PG. The rooms were well-maintained and the food was delicious.",
+      "id": 5
+    },
+    {
+      "name": "Navneeth",
+      "email": "navneethN@gmail.com",
+      "message": "I am highly impressed with the cleanliness and ambiance of the PG. It's a great place to live in.",
+      "id": 6
+    },
+    {
+      "name": "Kavita Reddy",
+      "email": "kavita.reddy@example.com",
+      "message": "The staff at the PG was very welcoming and helpful. I felt safe and comfortable during my entire stay.",
+      "id": 7
+    },
+    {
+      "name": "Sandeep Verma",
+      "email": "sandeep.verma@example.com",
+      "message": "I had a memorable time at the PG. The amenities provided were excellent, and I made some great friends.",
+      "id": 8
+    },
+    {
+      "name": "Neha Gupta",
+      "email": "neha.gupta@example.com",
+      "message": "The PG offers a homely atmosphere, and the location is convenient. I would definitely recommend it to others.",
+      "id": 9
+    },
+    {
+      "name": "Vineetha",
+      "email": "vineethareddy@gamil.com",
+      "mobile": "06784531901",
+      "message": "This is an awesome place to stay. Feels like home. The management and all is also very good for girls safety it’s very safe to stay. Highly recommended!",
+      "id": 11
+    },
+    {
+      "name": "Manju Dhara",
+      "email": "manjudhara@gmail.com",
+      "mobile": "8974903267",
+      "message": "My sister is staying here It was a good experience staying in Oxygen Pg. Health Food. Good Environment in Pg.Totally feeling Good.",
+      "id": 12
+    }
+  ],
+  "reserveNow": [
+    {
+      "branch": "Marathalli, Bangalore",
+      "sharing": "2 Sharing",
+      "firstName": "Sasi Kumar",
+      "lastName": "Peddireddy",
+      "mobile": "8688751181",
+      "email": "sasikumarpeddireddy373@gmail.com",
+      "checkInDate": "2023-07-24T18:30:00.000Z",
+      "gender": "Male",
+      "message": "Extra pillow",
+      "id": 1
+    },
+    {
+      "branch": "Electronic City, Bangalore",
+      "sharing": "Single Sharing",
+      "firstName": "Manju",
+      "lastName": "Dhara",
+      "mobile": "8974903267",
+      "email": "manjudhara@gmail.com",
+      "checkInDate": "2023-07-26T18:30:00.000Z",
+      "gender": "Male",
+      "message": "I may come early in the morning",
+      "id": 2
+    },
+    {
+      "branch": "Marathalli, Bangalore",
+      "sharing": "Single Sharing",
+      "firstName": "Samvedhya",
+      "lastName": "bendapudi",
+      "mobile": "9690032671",
+      "email": "samvedhyabendapudi@gmail.com",
+      "checkInDate": "2023-07-26T18:30:00.000Z",
+      "gender": "Female",
+      "message": "I have more luggage , I kindly request you to provide extra cupboard",
+      "id": 3
+    }
+  ],
+  "visiting": [
+    {
+      "branch": "Marathalli, Bangalore",
+      "firstName": "Sasi Kumar",
+      "lastName": "Peddireddy",
+      "mobile": "08688751181",
+      "email": "sasikumar.peddireddy@hitachivantara.com",
+      "visitingDate": "2023-07-03T18:30:00.000Z",
+      "timeSlot": "9-12 AM",
+      "message": "new pg",
+      "id": 1
+    },
+    {
+      "branch": "Whitefeild, Bangalore",
+      "firstName": "Sasi Kumar",
+      "lastName": "Peddireddy",
+      "mobile": "8688751181",
+      "email": "sasikumarpeddireddy373@gmail.com",
+      "visitingDate": "2023-07-24T18:30:00.000Z",
+      "timeSlot": "12-3 PM",
       "message": "looking for pg",
       "id": 2
     }

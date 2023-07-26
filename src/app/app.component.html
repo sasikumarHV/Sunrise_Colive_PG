@@ -1,19 +1,31 @@
-<mat-toolbar color="primary" class="sticky-toolbar" >
-    <mat-toolbar-row>
-      <mat-label class="logo">Sunrise Colive PG</mat-label>
-      <span class="spacer"></span>
-      <div class="nav-size">
-      <button mat-button routerLink="/home" >Home</button>
-      <button mat-button routerLink="/aboutus" >About us</button>
-      <button mat-button routerLink="/amenities" >Amenities</button>
-      <button mat-button routerLink="/gallery">Gallery</button>
-      <!--<button mat-button routerLink="/packages" >Packages</button> -->
-      <button mat-button routerLink="/contactus">Contact us</button>
-      <button mat-fab extended routerLink="/register" style="background-color:rgb(44, 132, 17);color:white" >Book a bed</button>
-      <!-- <button  class="example-button-row" mat-fab extended routerLink="/login"  style="color:white;"> Login </button> -->
+<mat-toolbar color="primary" class="sticky-toolbar">
+  <mat-toolbar-row>
+    <mat-label class="logo">Sunrise Colive PG</mat-label>
+    <span class="spacer"></span>
+    <div class="nav-size">
+      <button mat-icon-button class="menu-icon" aria-label="Menu icon" (click)="toggleMenu()">
+        <mat-icon>{{ isMenuIconClose ? 'close' : 'menu' }}</mat-icon>
+      </button>
+      
+      <div class="show" [class.active]="isMenuOpen">
+        <!-- Navigation links -->
+        <div class="column-links">
+          <button mat-button routerLink="/home">Home</button>
+          <button mat-button routerLink="/aboutus">About us</button>
+          <button mat-button routerLink="/amenities">Amenities</button>
+          <button mat-button routerLink="/gallery">Gallery</button>
+          <button mat-button routerLink="/packages">Packages</button>
+          <button mat-button routerLink="/contactus">Contact us</button>
+          <button *ngIf="isAdminUser" mat-fab extended routerLink="/admin" style="background-color:rgb(44, 132, 17);color:white">Book a bed</button>
+          <button class="example-button-row" mat-button routerLink="/login" style="color:white;">Login</button>
+        </div>
       </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
 <router-outlet></router-outlet>
 <lib-ng-toast></lib-ng-toast>
 <ng-confirm></ng-confirm>
@@ -33,22 +45,22 @@
         <h3>Menu</h3>
       </div>
       <ul>
-        <li><a routerLink="home">-  Home</a></li>
-        <li><a routerLink="aboutus">- About Us</a></li>
-        <li><a routerLink="amenities">- Amenities</a></li>
-        <li><a routerLink="gallery">- Gallery</a></li>
+        <li><a routerLink="/home">-  Home</a></li>
+        <li><a routerLink="/aboutus">- About Us</a></li>
+        <li><a routerLink="/amenities">- Amenities</a></li>
+        <li><a routerLink="/gallery">- Gallery</a></li>
       </ul>
     </aside>
   </div>
-  <div class="col-md-4 col-xs-6">
+  <div class="col-md-4 col-xs-4">
     <aside class="f_widget link_widget">
       <div class="f_title">
         <h3>Information</h3>
       </div>
       <ul>
-        <li><a routerLink="contactus">- Contact Us</a></li>
-        <li><a routerLink="contactus#content-data-1">- Complaints/Issues</a></li>
-        <li><a routerLink="contactus#content-data-2">- Couriers and Deliveries</a></li>
+        <li><a routerLink="/contactus">- Contact Us</a></li>
+        <li><a routerLink="/contactus#content-data-1">- Complaints/Issues</a></li>
+        <li><a routerLink="/contactus#content-data-2">- Couriers and Deliveries</a></li>
       </ul>
     </aside>
   </div>

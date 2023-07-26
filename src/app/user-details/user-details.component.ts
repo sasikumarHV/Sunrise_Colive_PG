@@ -5,6 +5,7 @@ import { ApiService } from '../services/api.service';
 import { Location } from '@angular/common';
 
 
+
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',
@@ -14,7 +15,7 @@ export class UserDetailsComponent implements OnInit{
 
   public userID! : number;
   UserDetail!: User
-  constructor(private activatedRoute : ActivatedRoute, private api : ApiService,private location : Location){
+  constructor(private activatedRoute : ActivatedRoute, private api : ApiService,private location : Location, ){
     
   }
   ngOnInit(): void {
@@ -22,13 +23,30 @@ export class UserDetailsComponent implements OnInit{
       this.userID = val['id'];
       this.fetchUserDetails(this.userID);
     })
+    
   }
-  fetchUserDetails(userID: number){
+
+  
+  // fetchUserDetails(userID: number){
+  //   this.api.getRegisteredUserId(userID)
+  //   .subscribe(res=>{
+  //     this.UserDetail = res;
+  //     console.log(this.UserDetail);
+  //   })
+  // }
+
+  fetchUserDetails(userID: number) {
+    console.log('Fetching user details for ID:', userID);
     this.api.getRegisteredUserId(userID)
-    .subscribe(res=>{
-      this.UserDetail = res;
-      console.log(this.UserDetail);
-    })
+      .subscribe(
+        res => {
+          this.UserDetail = res;
+          console.log('User details:', this.UserDetail);
+        },
+        error => {
+          console.log('Error fetching user details:', error);
+        }
+      );
   }
   goBack(): void {
     this.location.back();

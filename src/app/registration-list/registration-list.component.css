@@ -32,6 +32,9 @@ td, th {
 
 .table-responsive {
   overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .d-flex {

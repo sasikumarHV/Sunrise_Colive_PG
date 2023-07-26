@@ -1,16 +1,22 @@
-<div class="button-container1">
+<!-- <div class="button-container1">
     <div class="button-wrapper">
         <button mat-stroked-button routerLink="/callreturn" >Call Requests</button>
         <button mat-stroked-button routerLink="/list" style="margin-left: 10px;">Existing Customers</button>
+        <button mat-stroked-button routerLink="/prereserve" style="margin-left: 10px;">Pre Reservation</button>
+        <button mat-stroked-button routerLink="/visittable" style="margin-left: 10px;">Visiting Customers</button>
     </div>
-</div>      
-    <div>
+</div>       -->
+<button routerLink="/admin" mat-raised-button style=" color: black; margin-top: 20px;">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Back
+  </button>
+    <div style="margin-top: 20px;">
         <h1 style="text-align: center;color: rgba(228, 71, 4, 0.991);"><b>Customer Registration Form</b></h1>
     </div>
     
  
 
-<div class="registration-form m-3 p-4">
+<div class="registration-form m-3 p-4" >
     <form [formGroup]="registerForm" (ngSubmit)="registerSubmitted()">
         <div class="row" >
             <div class="col-md-6">
@@ -151,6 +157,18 @@
             </div>
 
             <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Branch</mat-label>
+                    <mat-select formControlName="branch">
+                      <mat-option *ngFor="let branch of branches" [value]="branch">
+                        {{branch}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="Branch.errors?.['required'] && (Branch.dirty || Branch.touched)">please select branch</mat-error>
+                  </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
                 <label id="example-radio-group-label">Select your gender</label>
                 <mat-radio-group formControlName="gender" class="example-radio-group">
                     <mat-radio-button class="example-radio-button" *ngFor="let gender of genders" [value]="gender">
@@ -160,7 +178,9 @@
                         <span *ngIf="Gender.errors?.['required']">please select gender</span>
                       </mat-error>
                 </mat-radio-group>
-            </div>          
+            </div>  
+            
+            
         </div>
         <div class="button-container">
             <button *ngIf="!isUpdateActive" (click)="submit()" class="submit-button" mat-raised-button [disabled]="registerForm.invalid" style="background-color: green; color: white;">Submit</button>

@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../services/api.service';
-import { NgToastService } from 'ng-angular-popup';
-import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { FeedbackComponent } from '../feedback/feedback.component';
 
 @Component({
   selector: 'app-home',
@@ -13,13 +13,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 export class HomeComponent implements OnInit {
   callRequestForm!: FormGroup;
   displayedColumns: string[] = ['branch', 'name', 'mobile', 'email', 'message'];
-  public branches = ['Marathalli, Bangalore', 'Whitefeild, Bangalore', 'Electronic City, Bangalore','Hopefarm, Bangalore'] ;
+  public branches = ['Marathalli, Bangalore', 'Whitefeild, Bangalore', 'Electronic City, Bangalore', 'Hopefarm, Bangalore'];
   dataSource = new MatTableDataSource<any>();
+  showFeedbackButton: boolean = true;
+  feedbacks: any[] = []; // Array to store the feedbacks
+  currentFeedbackIndex: number = 0; // Variable to store the current feedback index
 
   constructor(
     private apiService: ApiService,
-    private toastService: NgToastService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private matDialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -30,13 +33,21 @@ export class HomeComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required]
     });
+    this.apiService.getFeedback().subscribe(
+      (feedbacks: any) => {
+        this.feedbacks = feedbacks;
+        console.log('Fetched Feedbacks:', this.feedbacks);
+        this.startRotatingFeedbacks();
+      },
+      (error: any) => {
+        console.error('Error fetching feedbacks:', error);
+      }
+    );
   }
- 
 
   submit() {
     if (this.callRequestForm.valid) {
       const requestData = {
-        id:this.callRequestForm.get('id')?.value,
         branch: this.callRequestForm.get('branch')?.value,
         name: this.callRequestForm.get('name')?.value,
         mobile: this.callRequestForm.get('mobile')?.value,
@@ -67,7 +78,47 @@ export class HomeComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showFeedbackButton = scrollOffset < 10000; // Adjust the scrollOffset value as needed
+  }
+
+  openFeedbackForm() {
+    const dialogRef = this.matDialog.open(FeedbackComponent, {
+      width: '360px',
+    });
+
+    dialogRef.afterClosed().subscribe((feedbackData: any) => {
+      if (feedbackData) {
+        console.log('Feedback Data:', feedbackData);
+        // You can now pass this feedback data to the ApiService to post it to the server.
+        this.apiService.postFeedback(feedbackData).subscribe(
+          (response: any) => {
+            console.log('Feedback Submitted Successfully', response);
+          },
+          (error: any) => {
+            console.error('Error while submitting feedback:', error);
+          }
+        );
+      }
+    });
+  }
+   // Function to get the current feedback based on the currentFeedbackIndex
+   getCurrentFeedback(): any {
+    return this.feedbacks[this.currentFeedbackIndex];
+  }
+
+  // Function to change the current feedback index every 3 seconds
+  startRotatingFeedbacks(): void {
+    setInterval(() => {
+      this.currentFeedbackIndex = (this.currentFeedbackIndex + 1) % this.feedbacks.length;
+    }, 3000);
+  }
+  
 }
+
 
 
 

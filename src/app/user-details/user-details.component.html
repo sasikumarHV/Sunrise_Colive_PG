@@ -1,71 +1,70 @@
-<mat-card class="example-card" style="background-color: rgb(234, 231, 202);">
+<mat-card class="example-card" style="background-color: rgb(255, 255, 255);">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{UserDetail.firstName}} {{UserDetail.lastName}}</mat-card-title>
-      <mat-card-subtitle>{{UserDetail.email}}</mat-card-subtitle>
+      <mat-card-title>{{ UserDetail.firstName }} {{ UserDetail.lastName }}</mat-card-title>
+      <mat-card-subtitle>{{ UserDetail.email }}</mat-card-subtitle>
     </mat-card-header>
-    
+  
     <mat-card-content>
-        
-
-        <mat-list>
-            <mat-list-item>
-                <div matline>Mobile : 
-                    <button mat-button>{{UserDetail.mobile}}</button>
-                </div> 
-            </mat-list-item>
-
-            <mat-list-item>
-                <div matline>Workplace location :
-                    <button mat-button>{{UserDetail.workplaceLocation}}</button>
-                </div> 
-            </mat-list-item>
-        
-
-        
-            <mat-list-item>
-                <div matline>Gender :
-                    <button mat-button>{{UserDetail.gender}}</button>
-                </div> 
-            </mat-list-item>
-
-           
-    
-           <!--<mat-list-item>
-                <div matline> Age :
-                    <button mat-button>{{UserDetail.age}}</button>
-                </div> 
-            </mat-list-item> -->
-                   
-            <mat-list-item>
-                <div matline> City :
-                    <button mat-button>{{UserDetail.city}}</button>
-                </div> 
-            </mat-list-item>
-
-
-        
-            <mat-list-item>
-                <div matline>State :
-                    <button mat-button>{{UserDetail.state}}</button>
-                </div> 
-            </mat-list-item>
-
-            <mat-list-item>
-                <div matline>
-                    Country : 
-                    <button mat-button>{{UserDetail.country}}</button>
-                </div> 
-            </mat-list-item>
-            
-            <mat-list-item>
-                <div matline>
-                    Pincode : 
-                    <button mat-button>{{UserDetail.pincode}}</button>
-                </div> 
-            </mat-list-item>
-        </mat-list>  
+      <mat-list>
+        <mat-list-item>
+          <div mat-line>
+            Branch:
+            <button mat-button>{{ UserDetail.branch }}</button>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <div mat-line>
+            Mobile:
+            <button mat-button>{{ UserDetail.mobile }}</button>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <div mat-line>
+            Workplace location:
+            <button mat-button>{{ UserDetail.workplaceLocation }}</button>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <div mat-line>
+            Gender:
+            <button mat-button>{{ UserDetail.gender }}</button>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <div mat-line>
+            City:
+            <button mat-button>{{ UserDetail.city }}</button>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <div mat-line>
+            State:
+            <button mat-button>{{ UserDetail.state }}</button>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <div mat-line>
+            Country:
+            <button mat-button>{{ UserDetail.country }}</button>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item>
+          <div mat-line>
+            Pincode:
+            <button mat-button>{{ UserDetail.pincode }}</button>
+          </div>
+        </mat-list-item>
+      </mat-list>
     </mat-card-content>
   </mat-card>
+  
   
    

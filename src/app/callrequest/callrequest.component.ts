@@ -76,6 +76,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ApiService } from '../services/api.service';
 import { callRequests } from '../models/requests.model';
+import { Call } from '@angular/compiler';
 
 @Component({
   selector: 'app-callrequest',
@@ -89,6 +90,7 @@ export class CallrequestComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   public requests: callRequests[] | undefined ;
+  
 
   constructor(private apiService: ApiService) {}
 

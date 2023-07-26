@@ -1,0 +1,81 @@
+<div>
+  <form [formGroup]="reserveNowForm" (ngSubmit)="submitReserveNow()">
+    <button mat-icon-button style="position: absolute; top: 5px; right: 5px;" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+
+    <h1 mat-dialog-title>Reserve Now</h1>
+
+    <!-- Dialog content -->
+    <div mat-dialog-content class="content">
+      <div class="row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Branch</mat-label>
+          <mat-select formControlName="branch">
+            <mat-option *ngFor="let branch of branches" [value]="branch">
+              {{branch}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Sharing</mat-label>
+          <mat-select formControlName="sharing">
+            <mat-option *ngFor="let sharing of sharings" [value]="sharing">
+              {{sharing}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> 
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>First Name</mat-label>
+          <input formControlName="firstName" matInput placeholder="First name">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Last Name</mat-label>
+          <input formControlName="lastName" matInput placeholder="Last name">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Mobile</mat-label>
+          <input formControlName="mobile" matInput placeholder="Contact">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>E-mail</mat-label>
+          <input formControlName="email" matInput placeholder="Mail id">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Check in Date</mat-label>
+          <input formControlName="checkInDate" matInput [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+     
+        <label id="example-radio-group-label">Select your gender</label>
+        <mat-radio-group formControlName="gender" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" *ngFor="let gender of genders" [value]="gender">
+                {{gender}} 
+              </mat-radio-button>
+        </mat-radio-group>
+
+      <mat-form-field appearance="outline" class="form-field">
+        <textarea matInput placeholder="Special request" formControlName="message"></textarea>
+      </mat-form-field>
+    </div>
+
+    <!-- Dialog actions -->
+    <mat-dialog-actions align="center">
+      <button mat-raised-button color="primary" type="submit">Pay Rs-1000</button>
+      <button mat-raised-button color="warn" matDialogClose>Cancel</button>
+    </mat-dialog-actions>
+  </form>
+</div>
+
+
+  
+

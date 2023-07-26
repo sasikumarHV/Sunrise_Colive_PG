@@ -1,0 +1,87 @@
+<div>
+    <form [formGroup]="visitingForm" (ngSubmit)="submitVisiting()">
+      <button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-dialog-content>
+        <header>
+          <h1>Schedule a Visit</h1>
+        </header>
+
+        <div >
+            <mat-form-field appearance="outline">
+                <mat-label>Branch</mat-label>
+                <mat-select formControlName="branch">
+                  <mat-option *ngFor="let branch of branches" [value]="branch">
+                    {{branch}}
+                  </mat-option>
+                </mat-select>
+                <!-- <mat-error *ngIf="Branch.errors?.['required'] && (Branch.dirty || Branch.touched)">please select branch</mat-error> -->
+              </mat-form-field>
+        </div>
+  
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input formControlName="firstName" matInput placeholder="First name">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+        </div>
+  
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input formControlName="lastName" matInput placeholder="Last name">
+            <mat-icon matSuffix>person</mat-icon>
+          </mat-form-field>
+        </div>
+  
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile</mat-label>
+            <input formControlName="mobile" matInput placeholder="contact">
+            <mat-icon matSuffix>phone_android</mat-icon>
+          </mat-form-field>
+        </div>
+  
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>E-mail</mat-label>
+            <input formControlName="email" matInput placeholder="mail id">
+            <mat-icon matSuffix>email</mat-icon>
+          </mat-form-field>
+        </div>
+  
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Visiting date</mat-label>
+            <input formControlName="visitingDate" matInput [matDatepicker]="picker" placeholder="Visiting date">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div >
+            <mat-form-field appearance="outline">
+                <mat-label>Time slot</mat-label>
+                <mat-select formControlName="timeSlot">
+                  <mat-option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">
+                    {{timeSlot}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+  
+        <p>
+          <mat-form-field>
+            <textarea matInput placeholder="message" formControlName="message"></textarea>
+          </mat-form-field>
+        </p>
+      </mat-dialog-content>
+      <mat-dialog-actions align="center">
+        <button mat-raised-button color="primary" type="submit">Schedule a visit</button>
+      </mat-dialog-actions>
+    </form>
+  </div>
+  

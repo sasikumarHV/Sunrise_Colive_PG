@@ -5,7 +5,7 @@ export class User{
     mobile!:string;
     email!:string;
     joiningDate!:string;
-    leavingDate!:any;
+    leavingDate!:string;
     workplaceLocation!:string;
     roomNo!:string;
     city!:string;
@@ -13,4 +13,5 @@ export class User{
     pincode!:string;
     country!:string;
     gender!:string; 
+    branch!:string;
 }

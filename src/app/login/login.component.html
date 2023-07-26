@@ -1,26 +1,27 @@
+<div>
+  <img [src]="url" class="header-image" height="600px" width="1365px">
+  <div fxLayoutAlign="center center" fxFlexFill class="main-div" class="container" *ngIf="isLoginPage">
+    <mat-card fxFlex="25" fxFlex.lt-md="90" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);margin-top: 40px;">
+      <mat-toolbar style="text-align: center; color: grey;">User Login</mat-toolbar>
+      <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="login()" [formGroup]="loginForm">
+        <mat-form-field>
+          <input formControlName="email" matInput type="email" placeholder="Email" required>
+          <mat-error *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
+            Please enter a valid email
+          </mat-error>
+        </mat-form-field>
 
-<div fxLayoutAlign="center center" fxFlexFill class="main-div" class="container" *ngIf="isLoginPage">
-    <mat-card fxFlex="25" fxFlex.lt-md="90">
-        <mat-toolbar color="primary">Login page</mat-toolbar>
-        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" (ngSubmit)="login()" [formGroup]="loginForm">
-            <mat-form-field >
-              <input formControlName="email" matInput type="email" placeholder="email" required>
+        <mat-form-field>
+          <input formControlName="password" matInput type="password" placeholder="Password" required>
+          <mat-error *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+            Password is required
+          </mat-error>
+        </mat-form-field>
 
-              <!--<mat-error *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">please enter email</mat-error>-->
-              <mat-error *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
-                Please enter a valid email address
-            </mat-error>
-            </mat-form-field>
-          
-            <mat-form-field >
-              <input formControlName="password" matInput type="password" placeholder="Password"  required>
-              <mat-error *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
-                Password is required
-            </mat-error>
-             
-            </mat-form-field>
-            <button [disabled]="!loginForm.valid" mat-raised-button style="background-color: green;color: whitesmoke;" type="submit">Login</button>
-        </form>  
-        <h3>  Login as guest user? <a routerLink="/signup" style="text-decoration: none;">Signup</a>  </h3>
+        <button [disabled]="!loginForm.valid" mat-raised-button style="background-color: green;color: whitesmoke;" type="submit">Login</button>
+      </form>
+      <h3 class="btn-last">Login as a new user? <a routerLink="/signup" style="text-decoration: none;">Signup</a></h3>
     </mat-card>
+  </div>
 </div>
+

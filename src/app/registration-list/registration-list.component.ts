@@ -79,6 +79,8 @@ import { Router } from '@angular/router';
 
 import { NgConfirmService } from 'ng-confirm-box';
 import { NgToastService } from 'ng-angular-popup';
+import { MatDialog } from '@angular/material/dialog';
+import { UserDetailsComponent } from '../user-details/user-details.component';
 
 @Component({
   selector: 'app-registration-list',
@@ -92,6 +94,7 @@ export class RegistrationListComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
   displayedColumns: string[] = [
     'id',
+    'branch',
     'roomNo',
     'firstName',
     'lastName',
@@ -113,12 +116,18 @@ export class RegistrationListComponent implements OnInit {
     private router: Router,
     private confirm: NgConfirmService,
     private toast: NgToastService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private dialog: MatDialog,
   ) {}
 
   ngOnInit(): void {
     this.getUsers();
   }
+   
+  openUserDetails(){
+    this.dialog.open(UserDetailsComponent)
+  } 
+  
 
   getUsers(): void {
     this.api.getRegisteredUser().subscribe((res: User[]) => {

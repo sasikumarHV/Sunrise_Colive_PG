@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+    border-collapse: collapse; /* Add this line to collapse table borders */
+    border: 1px solid #858484; /* Add this line to set border properties */
+    margin: 0 10px;
+    margin: 10px 0;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  mat-elevation-z8 {
+    margin-left: 10px;
+  }
+  
+  .filter-spacer {
+    width: 100%; /* Set the width to 100% to occupy the available space */
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    margin-left: auto; /* Change margin-left to auto to create spacing on the right side */
+    max-width: 240px; /* Set a maximum width for the search field */
+  }
+  

@@ -1,0 +1,116 @@
+/* CSS for the room cards */
+.explor_room_item_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .explor_item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .explor_item img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .explor_text h4 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .explor_text p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .explor_text ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .explor_text ul li {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+  }
+  
+  .explor_footer {
+    margin-top: 20px;
+  }
+  
+  .explor_footer span {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .explor_footer h3 {
+    font-size: 20px;
+    margin-top: 5px;
+    color: #007bff;
+  }
+  
+ /* CSS for the room cards and button container */
+.explor_room_item_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .explor_item {
+    /* Your existing styles for room cards */
+    margin-bottom: 20px;
+  }
+  
+  /* Add some space between the toolbar and content */
+  mat-toolbar {
+    padding: 10px;
+  }
+  
+  /* CSS for the reserve and schedule buttons */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .reserve-button,
+  .schedule-button {
+    font-size: 16px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .reserve-button {
+    background-color: green;
+    color: white;
+  }
+  
+  .schedule-button {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+  }
+  
+  .reserve-button:hover,
+  .schedule-button:hover {
+    background-color: #007f39; /* Darker shade of green on hover */
+  }
+  
+  /* Add gap between buttons */
+  .reserve-button + .schedule-button {
+    margin-left: 10px;
+  }

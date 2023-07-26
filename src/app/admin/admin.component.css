@@ -1,0 +1,50 @@
+/* Container for the image */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+  }
+  
+  /* Image */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Button container */
+  .button-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  /* Button wrapper */
+  .button-wrapper {
+    margin: 10px;
+  }
+  
+  /* Buttons */
+  .mat-stroked-button {
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  /* Button hover effect */
+  .mat-stroked-button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Button last row */
+  .last-row {
+    margin-bottom: 20px;
+  }
+  
+  /* ... Other styles as needed ... */
+  
+  

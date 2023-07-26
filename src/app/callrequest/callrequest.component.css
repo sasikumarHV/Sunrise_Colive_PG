@@ -16,13 +16,15 @@ mat-elevation-z8 {
 }
 
 .filter-spacer {
-  width: 240px;
-  flex: 1; /* Add this line to make the filter bar take up remaining space */
+  width: 100%; /* Set the width to 100% to occupy the available space */
+  flex: 1;
   display: flex;
-  justify-content: flex-end; /* Add this line to align the content to the right */
+  justify-content: flex-end;
   margin-top: 12px;
-  margin-left: 1100px; /* Add this line to create spacing on the right side */
+  margin-left: auto; /* Change margin-left to auto to create spacing on the right side */
+  max-width: 240px; /* Set a maximum width for the search field */
 }
+
 
 
   

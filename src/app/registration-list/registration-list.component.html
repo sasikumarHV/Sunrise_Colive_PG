@@ -1,11 +1,13 @@
+<div style="margin-top: 20px;">
+  <h1 style="text-align: center;color: rgba(228, 71, 4, 0.991);"><b>Existing Customers Data</b></h1>
+</div>
 <div class="table-responsive">
     <div class="d-flex justify-content-between">
-      <!-- <button routerLink="/register" mat-raised-button style=" color: black;">
+      <button routerLink="/admin" mat-raised-button style=" color: black;">
         <i class="fa fa-arrow-left" aria-hidden="true"></i>
         Back
-      </button> -->
+      </button>
       <br>
-     
       <mat-form-field appearance="outline" class="filter-spacer">
         <mat-label>Search</mat-label>
         <input style="font-size: 17px; " matInput (keyup)="applyFilter($event)" placeholder="Ex. Firstname" #input>
@@ -23,6 +25,11 @@
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
       <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="branch">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Branch </th>
+      <td mat-cell *matCellDef="let row"> {{row.branch | titlecase}}</td>
     </ng-container>
 
     <ng-container matColumnDef="roomNo">
@@ -105,8 +112,8 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
       <td mat-cell *matCellDef="let row">
-        <button  [routerLink]="['/details',row.id]" mat-icon-button style="color: black;"><i class="fa fa-eye"
-          aria-hidden="true"></i></button>
+        <!-- <button (click)="openUserDetails()" mat-icon-button style="color: black;"><i class="fa fa-eye"
+          aria-hidden="true"></i></button> -->
         <button mat-icon-button (click)="edit(row.id)"  style="color:darkgoldenrod"><i class="fa fa-pencil"
           aria-hidden="true"></i></button>
         <button mat-icon-button (click)="delete(row.id)"color="warn"><i class="fa fa-trash"

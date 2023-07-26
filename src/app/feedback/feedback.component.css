@@ -1,0 +1,53 @@
+/* CSS for the feedback dialog */
+mat-dialog-container {
+  padding: 5px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.form-field {
+  margin-bottom: 5px;
+}
+
+mat-dialog-actions {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Close button */
+button[mat-icon-button] {
+  position: absolute;
+  right: 5px;
+}
+
+/* Background overlay */
+::ng-deep .cdk-overlay-dark-backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Additional styles */
+.content {
+  margin-top: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Center the dialog title */
+mat-dialog-title {
+  display: flex;
+  justify-content: center;
+}

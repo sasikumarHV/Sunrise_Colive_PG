@@ -24,14 +24,14 @@
       <div class="show" [class.active]="isMenuOpen">
         <!-- Navigation links -->
         <div class="column-links">
-          <button mat-button routerLink="/home" (click)="closeMenu()">Home</button>
-          <button mat-button routerLink="/aboutus" (click)="closeMenu()">About us</button>
-          <button mat-button routerLink="/amenities" (click)="closeMenu()">Amenities</button>
-          <button mat-button routerLink="/gallery" (click)="closeMenu()">Gallery</button>
-          <button mat-button routerLink="/packages" (click)="closeMenu()">Packages</button>
-          <button mat-button routerLink="/contactus" (click)="closeMenu()">Contact us</button>
-          <button *ngIf="isAdminUser" mat-fab extended routerLink="/admin" style="background-color:rgb(44, 132, 17);color:white" (click)="closeMenu()">Book a bed</button>
-          <button class="example-button-row" mat-button routerLink="/login" (click)="closeMenu()">Login</button>
+          <button mat-button routerLink="/home" (click)="closeMenu()" routerLinkActive="active-link">Home</button>
+          <button mat-button routerLink="/aboutus" (click)="closeMenu()" routerLinkActive="active-link">About us</button>
+          <button mat-button routerLink="/amenities" (click)="closeMenu()" routerLinkActive="active-link">Amenities</button>
+          <button mat-button routerLink="/gallery" (click)="closeMenu()" routerLinkActive="active-link">Gallery</button>
+          <button mat-button routerLink="/packages" (click)="closeMenu()" routerLinkActive="active-link">Packages</button>
+          <button mat-button routerLink="/contactus" (click)="closeMenu()" routerLinkActive="active-link">Contact us</button>
+          <button *ngIf="isAdminUser" mat-fab extended routerLink="/admin" routerLinkActive="active-link" style="background-color:rgb(44, 132, 17);color:white" (click)="closeMenu()">Book a bed</button>
+          <button class="example-button-row" mat-button routerLink="/login" routerLinkActive="active-link" (click)="closeMenu()">Login</button>
         </div>
       </div>
     </div>
@@ -40,7 +40,6 @@
 <router-outlet></router-outlet>
 <lib-ng-toast></lib-ng-toast>
 <ng-confirm></ng-confirm>
-
 
 <div class="row footer-hline">
   <div class="col-md-3 col-xs-6">
@@ -96,6 +95,7 @@
 <mat-toolbar color="primary" class="b-toolbar" >
   <p class="centered-text">&copy; 2023 Sunrise Colive PG.  All rights reserved.</p>
 </mat-toolbar>
+
 
 
 

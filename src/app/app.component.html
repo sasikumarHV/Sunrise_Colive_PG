@@ -1,3 +1,17 @@
+<!-- <div class="header-top-inner">
+  <div class="pull_left">
+    <a href="#">
+      <i class="fa fa-mobile f-s-20">
+        +91-8688751181
+      </i>
+    </a>
+    <a href="#">
+      <i class="fa fa-envelope-o">
+        ifo.sunrivecolivepg@gmail.com
+      </i>
+    </a>
+  </div>
+</div> -->
 <mat-toolbar color="primary" class="sticky-toolbar">
   <mat-toolbar-row>
     <mat-label class="logo">Sunrise Colive PG</mat-label>
@@ -10,22 +24,19 @@
       <div class="show" [class.active]="isMenuOpen">
         <!-- Navigation links -->
         <div class="column-links">
-          <button mat-button routerLink="/home">Home</button>
-          <button mat-button routerLink="/aboutus">About us</button>
-          <button mat-button routerLink="/amenities">Amenities</button>
-          <button mat-button routerLink="/gallery">Gallery</button>
-          <button mat-button routerLink="/packages">Packages</button>
-          <button mat-button routerLink="/contactus">Contact us</button>
-          <button *ngIf="isAdminUser" mat-fab extended routerLink="/admin" style="background-color:rgb(44, 132, 17);color:white">Book a bed</button>
-          <button class="example-button-row" mat-button routerLink="/login" style="color:white;">Login</button>
+          <button mat-button routerLink="/home" (click)="closeMenu()">Home</button>
+          <button mat-button routerLink="/aboutus" (click)="closeMenu()">About us</button>
+          <button mat-button routerLink="/amenities" (click)="closeMenu()">Amenities</button>
+          <button mat-button routerLink="/gallery" (click)="closeMenu()">Gallery</button>
+          <button mat-button routerLink="/packages" (click)="closeMenu()">Packages</button>
+          <button mat-button routerLink="/contactus" (click)="closeMenu()">Contact us</button>
+          <button *ngIf="isAdminUser" mat-fab extended routerLink="/admin" style="background-color:rgb(44, 132, 17);color:white" (click)="closeMenu()">Book a bed</button>
+          <button class="example-button-row" mat-button routerLink="/login" (click)="closeMenu()">Login</button>
         </div>
       </div>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
-
-
-
 <router-outlet></router-outlet>
 <lib-ng-toast></lib-ng-toast>
 <ng-confirm></ng-confirm>
@@ -49,6 +60,7 @@
         <li><a routerLink="/aboutus">- About Us</a></li>
         <li><a routerLink="/amenities">- Amenities</a></li>
         <li><a routerLink="/gallery">- Gallery</a></li>
+        <li><a routerLink="/packages">- Packages</a></li>
       </ul>
     </aside>
   </div>

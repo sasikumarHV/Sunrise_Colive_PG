@@ -14,7 +14,7 @@ import { Location } from '@angular/common';
 export class UserDetailsComponent implements OnInit{
 
   public userID! : number;
-  UserDetail!: User
+  UserDetail!: User ;
   constructor(private activatedRoute : ActivatedRoute, private api : ApiService,private location : Location, ){
     
   }
@@ -27,13 +27,7 @@ export class UserDetailsComponent implements OnInit{
   }
 
   
-  // fetchUserDetails(userID: number){
-  //   this.api.getRegisteredUserId(userID)
-  //   .subscribe(res=>{
-  //     this.UserDetail = res;
-  //     console.log(this.UserDetail);
-  //   })
-  // }
+
 
   fetchUserDetails(userID: number) {
     console.log('Fetching user details for ID:', userID);
@@ -51,6 +45,5 @@ export class UserDetailsComponent implements OnInit{
   goBack(): void {
     this.location.back();
   }
-  
+}    
 
-}

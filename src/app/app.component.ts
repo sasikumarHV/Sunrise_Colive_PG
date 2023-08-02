@@ -47,6 +47,11 @@ export class AppComponent {
     this.isMenuIconClose = !this.isMenuIconClose;
   }
 
+  closeMenu() {
+    this.isMenuOpen = false;
+    this.isMenuIconClose = false;
+  }
+
   login() {
     const user = this.users.find(
       (u: User) => u.email === this.email && u.password === this.password

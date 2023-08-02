@@ -120,7 +120,7 @@
   .menu-icon {
     display: block;
     position: absolute;
-    top: 12px;
+    top: 5px;
     right: 16px;
     font-size: 20px;
 
@@ -188,6 +188,62 @@
     display: none;
   }
 }
+
+.header-top-inner {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #333;
+}
+
+.pull-left {
+  display: flex;
+  align-items: center;
+}
+
+.pull-left a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.pull-left i {
+  margin-right: 10px;
+}
+
+.f-s-20 {
+  font-size: 20px;
+}
+
+.contact-info {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.pull-left a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Style the font-awesome icons */
+.fa-mobile,
+.fa-envelope-o {
+  color: #007bff;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .pull-left {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .pull-left a {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
 
 
 

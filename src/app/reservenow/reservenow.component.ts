@@ -45,6 +45,7 @@ export class ReservenowComponent implements OnInit {
     this.getReserveList();
   }
 
+ 
   openReserveNowForm() {
     const dialogRef = this.matDialog.open(ReservenowComponent, {
       width: '360px',

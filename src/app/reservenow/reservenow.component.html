@@ -1,6 +1,6 @@
 <div>
   <form [formGroup]="reserveNowForm" (ngSubmit)="submitReserveNow()">
-    <button mat-icon-button style="position: absolute; top: 5px; right: 5px;" mat-dialog-close>
+    <button mat-icon-button style="float: right; margin: 5px;" matDialogClose>
       <mat-icon>close</mat-icon>
     </button>
 
@@ -56,7 +56,7 @@
         </mat-form-field>
       </div>
      
-        <label id="example-radio-group-label">Select your gender</label>
+        <label id="example-radio-group-label">Select your gender</label><br>
         <mat-radio-group formControlName="gender" class="example-radio-group">
             <mat-radio-button class="example-radio-button" *ngFor="let gender of genders" [value]="gender">
                 {{gender}} 

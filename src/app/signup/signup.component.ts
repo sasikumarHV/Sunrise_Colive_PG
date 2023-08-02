@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 export class SignupComponent implements OnInit{
   
   public signupForm !: FormGroup;
-signUpData: any;
+  signUpData: any;
  
   constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router,private apiService :ApiService){ }
   

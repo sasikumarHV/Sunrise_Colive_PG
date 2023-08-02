@@ -13,7 +13,23 @@
     object-fit: cover;
   }
   
-  /* Button container */
+  /* Buttons */
+  .mat-stroked-button {
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    background-color: #fff; /* Set initial background color */
+    color: #333; /* Set initial text color */
+  }
+  
+  /* Button hover effect */
+  .mat-stroked-button:hover {
+    background-color: #00ff3c; /* Change background color on hover to blue */
+    color: #ffda23; /* Change text color on hover to white */
+  }
+  
+  /* Flexbox styling for 3 columns */
   .button-container1 {
     display: flex;
     flex-wrap: wrap;
@@ -21,30 +37,17 @@
     margin-top: 30px;
   }
   
-  /* Button wrapper */
   .button-wrapper {
     margin: 10px;
+    flex: 0 0 calc(33.33% - 20px); /* Each column takes 33.33% width with 20px margin between buttons */
   }
   
-  /* Buttons */
-  .mat-stroked-button {
-    font-size: 16px;
-    padding: 12px 24px;
-    border-radius: 8px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  
-  /* Button hover effect */
-  .mat-stroked-button:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Button last row */
   .last-row {
     margin-bottom: 20px;
   }
   
-  /* ... Other styles as needed ... */
+  
+  
+ 
   
   
